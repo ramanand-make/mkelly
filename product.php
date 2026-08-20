@@ -35,7 +35,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $product['name']; ?> – AstrologerRageevG</title>
+    <title><?php echo $product['name']; ?> – Mkelly</title>
     <base href="<?= BASE_URL ?>">
     
       <!-- SWIPER CSS -->
@@ -51,9 +51,9 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#F5C518',
-                        secondary: '#1a1a1a',
-                        accent: '#D4AF37',
+                        primary: '#054B2C',
+                        secondary: '#000000',
+                        accent: '#C11712',
                         background: '#FAFAFA',
                         surface: '#FFFFFF',
                         muted: '#6B7280',
@@ -83,7 +83,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=<?= time() ?>" rel="stylesheet">
 </head>
 <body class="product-detail-page">
 
@@ -135,7 +135,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                 <div class="space-y-2">
                     <h1 class="product-detail-title font-bold text-[#282928] tracking-tight leading-tight"><?= htmlspecialchars($product['name']); ?></h1>
                     <div class="flex items-center gap-3">
-                        <div class="flex text-[#F5C518] text-lg">
+                        <div class="flex text-[#054B2C] text-lg">
                             <?php 
                             $rating = isset($product['rating']) ? $product['rating'] : 4.5;
                             for($i=0; $i<5; $i++): ?>
@@ -150,7 +150,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                 <!-- Tags -->
                 <!-- <div class="flex flex-wrap gap-2">
                     <?php foreach ($product['tags'] as $tag): ?>
-                        <span class="bg-[#FFF9E6] text-[#D4AF37] px-4 py-1.5 rounded-full text-sm font-bold border border-[#F5C518]/20 shadow-sm"><?php echo $tag; ?></span>
+                        <span class="bg-[#FCE8E6] text-[#C11712] px-4 py-1.5 rounded-full text-sm font-bold border border-[#054B2C]/20 shadow-sm"><?php echo $tag; ?></span>
                     <?php endforeach; ?>
                 </div> -->
 
@@ -269,7 +269,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                             Add To Cart
                         </button>
                     </div>
-                    <button class="w-full bg-[#F5C518] text-[#1a1a1a] py-3 rounded-2xl font-black text-xl hover:bg-[#FACC15] transition-all transform hover:scale-[1.01] active:scale-95 shadow-lg shadow-yellow-500/20 flex items-center justify-center gap-4 buy-now-direct"
+                    <button class="w-full bg-[#054B2C] text-white py-3 rounded-2xl font-black text-xl hover:bg-[#C11712] transition-all transform hover:scale-[1.01] active:scale-95 shadow-lg shadow-black/20 flex items-center justify-center gap-4 buy-now-direct"
                             data-id="<?= $product['id'] ?>" 
                             data-name="<?= htmlspecialchars($product['name']) ?>" 
                             data-price="<?= $product['sale_price'] > 0 ? $product['sale_price'] : $product['price'] ?>" 
@@ -294,7 +294,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
 
                 <!-- Spiritual Heading (From Screenshot) -->
                 <div class="pt-8 text-center lg:text-left">
-                    <h2 class="text-3xl lg:text-xl font-extrabold text-[#D4AF37] leading-tight">
+                    <h2 class="text-3xl lg:text-xl font-extrabold text-[#C11712] leading-tight">
                         Spiritual Vibe for a Calm Mind & Strong Willpower
                     </h2>
                 </div>
@@ -305,8 +305,8 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                     <div class="accordion-item py-6 active">
                         <button class="w-full flex items-center justify-between text-left group outline-none" onclick="toggleAccordion(this)">
                             <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-yellow-50 transition-colors">
-                                    <i class="fas fa-list-ul text-gray-400 group-hover:text-yellow-600 transition-colors"></i>
+                                <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-emerald-50 transition-colors">
+                                    <i class="fas fa-list-ul text-gray-400 group-hover:text-[#054B2C] transition-colors"></i>
                                 </div>
                                 <span class="text-xl font-black text-gray-800 tracking-tight">Description</span>
                             </div>
@@ -323,8 +323,8 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                     <div class="accordion-item py-6">
                         <button class="w-full flex items-center justify-between text-left group outline-none" onclick="toggleAccordion(this)">
                             <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-yellow-50 transition-colors">
-                                    <i class="far fa-question-circle text-gray-400 group-hover:text-yellow-600 transition-colors"></i>
+                                <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-emerald-50 transition-colors">
+                                    <i class="far fa-question-circle text-gray-400 group-hover:text-[#054B2C] transition-colors"></i>
                                 </div>
                                 <span class="text-xl font-black text-gray-800 tracking-tight">Got any questions</span>
                             </div>
@@ -341,8 +341,8 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                     <div class="accordion-item py-6">
                         <button class="w-full flex items-center justify-between text-left group outline-none" onclick="toggleAccordion(this)">
                             <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-yellow-50 transition-colors">
-                                    <i class="fas fa-box-open text-gray-400 group-hover:text-yellow-600 transition-colors"></i>
+                                <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-emerald-50 transition-colors">
+                                    <i class="fas fa-box-open text-gray-400 group-hover:text-[#054B2C] transition-colors"></i>
                                 </div>
                                 <span class="text-xl font-black text-gray-800 tracking-tight">Return and Exchange</span>
                             </div>
@@ -359,8 +359,8 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                     <div class="accordion-item py-6">
                         <button class="w-full flex items-center justify-between text-left group outline-none" onclick="toggleAccordion(this)">
                             <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-yellow-50 transition-colors">
-                                    <i class="fas fa-info-circle text-gray-400 group-hover:text-yellow-600 transition-colors"></i>
+                                <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-emerald-50 transition-colors">
+                                    <i class="fas fa-info-circle text-gray-400 group-hover:text-[#054B2C] transition-colors"></i>
                                 </div>
                                 <span class="text-xl font-black text-gray-800 tracking-tight">Disclaimer</span>
                             </div>

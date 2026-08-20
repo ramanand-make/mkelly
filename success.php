@@ -54,7 +54,7 @@ if ($order_id > 0) {
 
                 $mail->setFrom(
                     'info@astrologerraajeev.com',
-                    'Astrologer RaajeevG store'
+                    'Mkelly Store'
                 );
 
                 // Customer
@@ -66,7 +66,7 @@ if ($order_id > 0) {
                 // Admin
                 $mail->addBCC(
                     'rajeev.yadav0506@gmail.com',
-                    'Astrologer RaajeevG'
+                    'Mkelly'
                 );
 
                 $mail->isHTML(true);
@@ -90,11 +90,11 @@ if ($order_id > 0) {
                         
                             <!-- Header -->
                             <tr>
-                                <td style="background:linear-gradient(135deg,#D4AF37,#F5C518);padding:35px;text-align:center;">
-                                    <h1 style="margin:0;color:#222;font-size:30px;">
-                                        Astrologer RaajeevG
+                                <td style="background:linear-gradient(135deg,#C11712,#054B2C);padding:35px;text-align:center;">
+                                    <h1 style="margin:0;color:#ffffff;font-size:30px;">
+                                        Mkelly
                                     </h1>
-                                    <p style="margin-top:10px;color:#333;font-size:16px;">
+                                    <p style="margin-top:10px;color:#ffffff;font-size:16px;">
                                         Order Successfully Placed
                                     </p>
                                 </td>
@@ -120,7 +120,7 @@ if ($order_id > 0) {
                             <!-- Message -->
                             <tr>
                                 <td style="padding:0 40px 20px;text-align:center;">
-                                    <h2 style="color:#222;margin-bottom:10px;">
+                                    <h2 style="color:#000000;margin-bottom:10px;">
                                         Thank You For Your Purchase!
                                     </h2>
                         
@@ -165,7 +165,7 @@ if ($order_id > 0) {
                                         <tr style="background:#fafafa;">
                                             <td><strong>Order Total</strong></td>
                                             <td align="right">
-                                                <strong style="font-size:18px;color:#D4AF37;">
+                                                <strong style="font-size:18px;color:#C11712;">
                                                     ₹'.$order['total_amount'].'
                                                 </strong>
                                             </td>
@@ -180,8 +180,8 @@ if ($order_id > 0) {
                             <tr>
                                 <td style="padding:0 40px 30px;">
                                     <div style="
-                                        background:#fff8e1;
-                                        border-left:4px solid #D4AF37;
+                                        background:#FCE8E6;
+                                        border-left:4px solid #C11712;
                                         padding:15px;
                                         color:#555;
                                         font-size:14px;
@@ -196,9 +196,9 @@ if ($order_id > 0) {
                             <!-- Button -->
                             <tr>
                                 <td align="center" style="padding-bottom:30px;">
-                                    <a href="https://shop.astrologerraajeev.com/"
+                                    <a href="https://www.mkellybiotech.com/"
                                        style="
-                                       background:#D4AF37;
+                                       background:#C11712;
                                        color:#fff;
                                        text-decoration:none;
                                        padding:14px 32px;
@@ -213,7 +213,7 @@ if ($order_id > 0) {
                             <!-- Footer -->
                             <tr>
                                 <td style="
-                                    background:#222;
+                                    background:#000000;
                                     color:#ccc;
                                     text-align:center;
                                     padding:25px;
@@ -221,14 +221,14 @@ if ($order_id > 0) {
                                     line-height:1.8;
                                 ">
                                     <strong style="color:#fff;">
-                                        Astrologer RaajeevG store
+                                        Mkelly Store
                                     </strong>
                                     <br>
-                                    Thank you for choosing our spiritual products and remedies.
+                                    Thank you for choosing our organic food and wellness products.
                                     <br><br>
-                                    Email: info@astrologerraajeev.com
+                                    Email: mkellybiotech@gmail.com
                                     <br>
-                                    © '.date('Y').' Astrologer RaajeevG store. All Rights Reserved.
+                                    © '.date('Y').' Mkelly Store. All Rights Reserved.
                                 </td>
                             </tr>
                         
@@ -289,7 +289,7 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=<?= time() ?>" rel="stylesheet">
     
     <style>
         .success-page {
@@ -324,7 +324,7 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
             font-family: 'Playfair Display', serif;
             font-size: 32px;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #000000;
             margin-bottom: 15px;
         }
         .success-text {
@@ -334,20 +334,20 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
             line-height: 1.6;
         }
         .btn-continue {
-            background: #F5C518;
-            color: #1a1a1a;
+            background: #054B2C;
+            color: #ffffff;
             padding: 12px 30px;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(245, 197, 24, 0.3);
+            box-shadow: 0 4px 15px rgba(5, 75, 44, 0.3);
         }
         .btn-continue:hover {
-            background: #D4AF37;
+            background: #C11712;
             transform: translateY(-2px);
-            color: #1a1a1a;
+            color: #ffffff;
         }
     </style>
 </head>

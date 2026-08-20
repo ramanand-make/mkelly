@@ -100,9 +100,9 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($title) ?> – AstrologerRajeev Store</title>
+    <title><?= htmlspecialchars($title) ?> – Mkelly Store</title>
     <base href="<?= BASE_URL ?>">
-    <meta name="description" content="Shop authentic spiritual products, crystals, rudraksha, gemstones and more at AstrologerRajeevG. Lab certified, ethically sourced with 25+ years of legacy.">
+    <meta name="description" content="Shop authentic organic, natural food powders and biotech products at Mkelly. Scientifically dried, premium quality with a legacy of trust.">
     <!-- SWIPER CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
@@ -116,9 +116,9 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#F5C518',
-                        secondary: '#1a1a1a',
-                        accent: '#D4AF37',
+                        primary: '#054B2C',
+                        secondary: '#000000',
+                        accent: '#C11712',
                         background: '#FAFAFA',
                         surface: '#FFFFFF',
                         muted: '#6B7280',
@@ -148,8 +148,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link href="<?= BASE_URL ?>assets/css/style.css" rel="stylesheet">
-    <link href="<?= BASE_URL ?>assets/css/checkout.css" rel="stylesheet">
+    <link href="<?= BASE_URL ?>assets/css/style.css?v=<?= time() ?>" rel="stylesheet">
+    <link href="<?= BASE_URL ?>assets/css/checkout.css?v=<?= time() ?>" rel="stylesheet">
 </head>
 <body>
 

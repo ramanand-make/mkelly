@@ -10,12 +10,12 @@ ini_set('display_startup_errors', 1);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstrorajeeG Store – Buy AstrorajeeG Remedies & Spiritual Products</title>
+    <title>Mkelly – Buy Natural Organic Food Powders & Wellness Products</title>
     <base href="<?= BASE_URL ?>">
-    <meta name="description" content="Shop authentic spiritual products, crystals, rudraksha, gemstones and more at Astroyogi Store. Lab certified, ethically sourced with 25+ years of legacy.">
+    <meta name="description" content="Shop natural, scientifically dried food powders, organic tea, beetroot and tomato powders at Mkelly. Premium quality and legacy of wellness.">
     <!-- SWIPER CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<link rel="icon" type="image/x-icon" href="assets/images/logo/logo-new (1).png">
+<link rel="icon" type="image/x-icon" href="assets/images/logo/logo.png">
 
 
 <!-- SWIPER JS -->
@@ -27,9 +27,9 @@ ini_set('display_startup_errors', 1);
             theme: {
                 extend: {
                     colors: {
-                        primary: '#F5C518',
-                        secondary: '#1a1a1a',
-                        accent: '#D4AF37',
+                        primary: '#054B2C',
+                        secondary: '#000000',
+                        accent: '#C11712',
                         background: '#FAFAFA',
                         surface: '#FFFFFF',
                         muted: '#6B7280',
@@ -59,7 +59,7 @@ ini_set('display_startup_errors', 1);
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=<?= time() ?>" rel="stylesheet">
 </head>
 <body>
 
@@ -67,56 +67,84 @@ ini_set('display_startup_errors', 1);
 
 
 <!-- HERO SLIDER -->
-<section class="hero-slider">
+<section class="mkelly-hero-section">
     <div class="swiper heroSwiper">
-
         <div class="swiper-wrapper">
 
-            <!-- Slide 1 -->
+            <!-- Slide 1: Tomato -->
             <div class="swiper-slide">
-                <div class="hero-slide">
-                    <img src="assets/images/slider/As1.png"
-                        alt="Banner 1">
-
-                    <div class="hero-overlay"></div>
-
-                    <!-- <div class="hero-content">
-                        <h2>Evil Eye Collection</h2>
-                        <p>Positive Vibes Only</p>
-                        <a href="#" class="hero-btn">Shop Now</a>
-                    </div> -->
+                <div class="mkelly-hero-slide bg-orange">
+                    <div class="mkelly-backdrop-text">Mkelly</div>
+                    <img src="assets/images/slider/shpinat-2.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-1">
+                    <img src="assets/images/slider/shpinat-1.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-2">
+                    <img src="assets/images/slider/shpinat-3.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-3">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6" data-aos="fade-right">
+                                <div class="mkelly-hero-content">
+                                    <span class="mkelly-hero-subtitle">CRAFTED TO PERFECTION</span>
+                                    <h2 class="mkelly-hero-title">Flavor Meets <span class="accent-crimson">Nutrition</span></h2>
+                                    <p class="mkelly-hero-desc">Enhance meals with nutrient-rich powders, blending taste and health effortlessly.</p>
+                                    <a href="collection/best-seller" class="mkelly-hero-btn">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center" data-aos="fade-left">
+                                <div class="mkelly-hero-img-wrapper">
+                                    <img src="assets/images/slider/tomato.png" alt="Tomato Powder" class="mkelly-hero-main-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slide 2 -->
+            <!-- Slide 2: Tea -->
             <div class="swiper-slide">
-                <div class="hero-slide">
-                    <img src="assets/images/slider/As2.png"
-                        alt="Banner 2">
-
-                    <div class="hero-overlay"></div>
-
-                    <!-- <div class="hero-content">
-                        <h2>Rudraksha Energy</h2>
-                        <p>Divine Spiritual Power</p>
-                        <a href="#" class="hero-btn">Explore Now</a>
-                    </div> -->
+                <div class="mkelly-hero-slide bg-green">
+                    <div class="mkelly-backdrop-text">Health</div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6" data-aos="fade-right">
+                                <div class="mkelly-hero-content">
+                                    <span class="mkelly-hero-subtitle">IMMUNITY BOOST</span>
+                                    <h2 class="mkelly-hero-title">Health <span class="accent-crimson">Every Day</span></h2>
+                                    <p class="mkelly-hero-desc">Boost your energy and immunity with our Cordyceps tea.</p>
+                                    <a href="collection/best-seller" class="mkelly-hero-btn">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center" data-aos="fade-left">
+                                <div class="mkelly-hero-img-wrapper">
+                                    <img src="assets/images/slider/tea.png" alt="Cordyceps Tea" class="mkelly-hero-main-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slide 3 -->
+            <!-- Slide 3: Beetroot -->
             <div class="swiper-slide">
-                <div class="hero-slide">
-                    <img src="assets/images/slider/As3.png"
-                        alt="Banner 3">
-
-                    <div class="hero-overlay"></div>
-
-                    <!-- <div class="hero-content">
-                        <h2>Healing Crystals</h2>
-                        <p>Balance Your Energy</p>
-                        <a href="#" class="hero-btn">Discover More</a>
-                    </div> -->
+                <div class="mkelly-hero-slide bg-bittersweet">
+                    <div class="mkelly-backdrop-text">Enjoy</div>
+                    <img src="assets/images/slider/shpinat-3.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-1">
+                    <img src="assets/images/slider/shpinat-2.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-2">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6" data-aos="fade-right">
+                                <div class="mkelly-hero-content">
+                                    <span class="mkelly-hero-subtitle">FRESHNESS REDEFINED</span>
+                                    <h2 class="mkelly-hero-title">Organic Food <span class="accent-orange">Every Day</span></h2>
+                                    <p class="mkelly-hero-desc">Scientifically dried products ensure less waste and more value.</p>
+                                    <a href="collection/best-seller" class="mkelly-hero-btn">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center" data-aos="fade-left">
+                                <div class="mkelly-hero-img-wrapper">
+                                    <img src="assets/images/slider/beetroot.png" alt="Beetroot Powder" class="mkelly-hero-main-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -310,7 +338,7 @@ var swiper = new Swiper(".heroSwiper", {
 </div>
             
             <div class="text-center mt-4">
-                <a href="collection/all" class="text-decoration-none d-inline-flex align-items-center fw-semibold btn-primary-shop" style="color: #1a1a1a;">
+                <a href="collection/all" class="text-decoration-none d-inline-flex align-items-center fw-semibold btn-primary-shop" style="color: #000000;">
                     View All Products <i class="fas fa-arrow-right ms-2"></i>
                 </a>
             </div>
@@ -570,7 +598,7 @@ var swiper = new Swiper(".heroSwiper", {
 </div>
             
             <div class="text-center mt-4">
-                <a href="collection/all" class="text-decoration-none d-inline-flex align-items-center fw-semibold btn-primary-shop" style="color: #1a1a1a;">
+                <a href="collection/all" class="text-decoration-none d-inline-flex align-items-center fw-semibold btn-primary-shop" style="color: #000000;">
                     View All Products <i class="fas fa-arrow-right ms-2"></i>
                 </a>
             </div>
@@ -724,7 +752,7 @@ var swiper = new Swiper(".heroSwiper", {
         </div>
     </section>
     
-        <?php include('includes/booking-form.php')?>
+        
 
     <!-- Trust Badges & Contact Section -->
     <!--<section class="py-5" style="-->
@@ -737,26 +765,26 @@ var swiper = new Swiper(".heroSwiper", {
     <!--            <div class="col-lg-6" data-aos="fade-right">-->
     <!--                <div class="d-flex flex-wrap gap-4">-->
     <!--                    <div class="d-flex align-items-center gap-3">-->
-    <!--                        <div style="width: 50px; height: 50px; background: #FFF9E6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">-->
-    <!--                            <i class="fas fa-check-circle" style="color: #D4AF37; font-size: 24px;"></i>-->
+    <!--                        <div style="width: 50px; height: 50px; background: #FCE8E6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">-->
+    <!--                            <i class="fas fa-check-circle" style="color: #C11712; font-size: 24px;"></i>-->
     <!--                        </div>-->
     <!--                        <span class="fw-medium" style="font-size: 18px !important;">Guarantee of Purity</span>-->
     <!--                    </div>-->
     <!--                    <div class="d-flex align-items-center gap-3">-->
-    <!--                        <div style="width: 50px; height: 50px; background: #FFF9E6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">-->
-    <!--                            <i class="fas fa-leaf" style="color: #D4AF37; font-size: 24px;"></i>-->
+    <!--                        <div style="width: 50px; height: 50px; background: #FCE8E6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">-->
+    <!--                            <i class="fas fa-leaf" style="color: #C11712; font-size: 24px;"></i>-->
     <!--                        </div>-->
     <!--                        <span class="fw-medium"  style="font-size: 18px !important;">Ethically Sourced</span>-->
     <!--                    </div>-->
     <!--                    <div class="d-flex align-items-center gap-3">-->
-    <!--                        <div style="width: 50px; height: 50px; background: #FFF9E6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">-->
-    <!--                            <i class="fas fa-certificate" style="color: #D4AF37; font-size: 24px;"></i>-->
+    <!--                        <div style="width: 50px; height: 50px; background: #FCE8E6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">-->
+    <!--                            <i class="fas fa-certificate" style="color: #C11712; font-size: 24px;"></i>-->
     <!--                        </div>-->
     <!--                        <span class="fw-medium"  style="font-size: 18px !important;">100% Lab Certified</span>-->
     <!--                    </div>-->
     <!--                    <div class="d-flex align-items-center gap-3">-->
-    <!--                        <div style="width: 50px; height: 50px; background: #FFF9E6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">-->
-    <!--                            <i class="fas fa-trophy" style="color: #D4AF37; font-size: 24px;"></i>-->
+    <!--                        <div style="width: 50px; height: 50px; background: #FCE8E6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">-->
+    <!--                            <i class="fas fa-trophy" style="color: #C11712; font-size: 24px;"></i>-->
     <!--                        </div>-->
     <!--                        <span class="fw-medium"  style="font-size: 18px !important;">25 Years of Legacy</span>-->
     <!--                    </div>-->
@@ -812,9 +840,9 @@ var swiper = new Swiper(".heroSwiper", {
     <section class="trust-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title" style="color: white;">Why AstrologerRaajeevG?</h2>
+                <h2 class="section-title" style="color: white;">Why Mkelly?</h2>
                 <p class="text-white-50 mx-auto" style="max-width: 800px;">
-                    Trust is our core value at AstrologerRaajeevG, where authenticity is key. We use only natural stones, free from dyes and artificial polish. With 25+ years of strong legacy, every purchase supports children's education and is crafted with care, integrity, and tradition.
+                    Trust is our core value at Mkelly, where authenticity is key. We process our products under scientific controls, using premium ingredients free from synthetic chemicals. With a strong legacy of quality and innovation, every product is crafted with care, integrity, and tradition.
                 </p>
             </div>
             
@@ -921,7 +949,7 @@ var swiper = new Swiper(".heroSwiper", {
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="publication-card">
                         <div style="height: 40px; display: flex; align-items: center; margin-bottom: 16px;">
-                            <span style="font-weight: 700; font-size: 18px; color: #333;">ETV Bharat</span>
+                            <span style="font-weight: 700; font-size: 18px; color: #000000;">ETV Bharat</span>
                         </div>
                         <p class="publication-text">ETV Bharat spotlights how Astroyogi is tapping Gen Z's rising interest in crystals</p>
                         <a href="#" class="read-more-link">Read More</a>
@@ -930,7 +958,7 @@ var swiper = new Swiper(".heroSwiper", {
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="publication-card">
                         <div style="height: 40px; display: flex; align-items: center; margin-bottom: 16px;">
-                            <span style="font-weight: 700; font-size: 18px; color: #333;">Indian Express</span>
+                            <span style="font-weight: 700; font-size: 18px; color: #000000;">Indian Express</span>
                         </div>
                         <p class="publication-text">Indian Express highlights Astroyogi's blend of astrology, crystals, and modern style</p>
                         <a href="#" class="read-more-link">Read More</a>

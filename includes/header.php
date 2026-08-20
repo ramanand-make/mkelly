@@ -8,7 +8,7 @@ require_once __DIR__ . '/functions.php';
 ?>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="assets/css/checkout.css">
+<link rel="stylesheet" href="assets/css/checkout.css?v=<?= time() ?>">
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-container">
@@ -20,16 +20,16 @@ require_once __DIR__ . '/functions.php';
     <div class="topbar-center">
       <span class="icon">⬡</span>
       <span class="text">
-        Start Your Astrology Journey
+        Start Your Wellness Journey
       </span>
-      <a href="https://astrologerraajeev.com/" class="shop-link">
+      <a href="https://www.mkellybiotech.com/" class="shop-link">
         Click Here <span class="arrow">↗</span>
       </a>
     </div>
 
     <!-- Right icon -->
     <div class="topbar-right">
-      <a href="https://www.instagram.com/astrologerraajeevg" target="_blank" class="insta-icon">  <i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.instagram.com/mkellybiotech" target="_blank" class="insta-icon">  <i class="fa-brands fa-instagram"></i></a>
     </div>
 
   </div>
@@ -40,9 +40,9 @@ require_once __DIR__ . '/functions.php';
             
             <!-- Logo -->
             <a href="./" class="text-decoration-none">
-                <h1 class="h4 mb-0 fw-bold" style="font-family: 'Playfair Display', serif; color: #1a1a1a;">
-                    <!-- <span style="color: #D4AF37;">Astro</span>Rajeev -->
-                     <img src="assets/images/logo/logo-new (1).png" alt="Astrologerrajeev Logo" >
+                <h1 class="h4 mb-0 fw-bold" style="font-family: 'Playfair Display', serif; color: #000000;">
+                    <!-- <span style="color: #C11712;">Astro</span>Rajeev -->
+                     <img src="assets/images/logo/logo.png" alt="Mkelly Logo" >
                 </h1>
             </a>
 
@@ -141,24 +141,24 @@ require_once __DIR__ . '/functions.php';
             <!-- Header Icons -->
             <div class="d-flex align-items-center" style="gap: 20px;">
                 <!-- <button class="btn p-0 border-0 bg-transparent" aria-label="Search">
-                    <i class="fas fa-search" style="font-size: 18px; color: #333;"></i>
+                    <i class="fas fa-search" style="font-size: 18px; color: #000000;"></i>
                 </button> -->
 
                 <!-- <button class="btn p-0 border-0 bg-transparent" aria-label="Account">
-                    <i class="far fa-user" style="font-size: 18px; color: #333;"></i>
+                    <i class="far fa-user" style="font-size: 18px; color: #000000;"></i>
                 </button> -->
 
                 <button class="btn p-0 border-0 bg-transparent position-relative cart-drawer-trigger" aria-label="Cart">
-                    <i class="fas fa-shopping-bag" style="font-size: 18px; color: #333;"></i>
+                    <i class="fas fa-shopping-bag" style="font-size: 18px; color: #000000;"></i>
 
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill cart-count"
-                        style="background: #F5C518; color: #1a1a1a; font-size: 10px;">
+                        style="background: #054B2C; color: #ffffff; font-size: 10px;">
                         <?= isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
                     </span>
                 </button>
 
                 <button class="mobile-menu-btn btn p-0 border-0 bg-transparent d-lg-none" aria-label="Menu">
-                    <i class="fas fa-bars" style="font-size: 22px; color: #333;"></i>
+                    <i class="fas fa-bars" style="font-size: 22px; color: #000000;"></i>
                 </button>
             </div>
         </div>
@@ -177,8 +177,36 @@ require_once __DIR__ . '/functions.php';
 
         <div class="cart-drawer-content">
             <!-- Rewards Progress -->
-            <div class="rewards-section ">
-                <img src="assets/images/order-process.png" />
+            <div class="rewards-section px-3 py-3 border-bottom">
+                <div class="rg-stepper-container">
+                    <div class="rg-stepper-line">
+                        <div class="rg-stepper-progress" style="width: 12.5%;"></div>
+                    </div>
+                    <div class="rg-stepper-step active">
+                        <div class="rg-step-circle">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <span class="rg-step-label">Order</span>
+                    </div>
+                    <div class="rg-stepper-step">
+                        <div class="rg-step-circle">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <span class="rg-step-label">Payment</span>
+                    </div>
+                    <div class="rg-stepper-step">
+                        <div class="rg-step-circle">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <span class="rg-step-label">Shipping</span>
+                    </div>
+                    <div class="rg-stepper-step">
+                        <div class="rg-step-circle">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <span class="rg-step-label">Delivery</span>
+                    </div>
+                </div>
             </div>
 
             <!-- Cart Items List -->
@@ -223,7 +251,7 @@ require_once __DIR__ . '/functions.php';
                 </div>
             </div>
 
-            <button class="btn btn-warning w-100 fw-bold py-3 buy-now-btn" style="background: #F5C518; border: none; font-size: 18px;">
+            <button class="btn btn-warning w-100 fw-bold py-3 buy-now-btn" style="background: #054B2C; color: #ffffff; border: none; font-size: 18px;">
                 Buy Now 
                 <!-- <div class="payment-icons ms-2 d-inline-flex align-items-center gap-1 bg-white/80 px-2 py-1 rounded">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Paytm_Logo_%28standalone%29.png" alt="Paytm" height="12">
@@ -501,8 +529,8 @@ require_once __DIR__ . '/functions.php';
 
     <div class="mobile-menu-header d-flex justify-content-between align-items-center">
         <h4 class="mb-0 fw-bold">
-            <!--<span style="color:#D4AF37;">Astro</span>Rajeev-->
-            <img src="assets/images/logo/logo-new (1).png" alt="Astrologerrajeev Logo" >
+            <!--<span style="color:#C11712;">Astro</span>Rajeev-->
+            <img src="assets/images/logo/logo.png" alt="Mkelly Logo" >
         </h4>
 
         <button class="mobile-menu-close btn border-0 bg-transparent">

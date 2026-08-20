@@ -8,10 +8,10 @@
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a> -->
                     <!-- </div> -->
-                    <img src="assets/images/logo/logo-new (1).png" alt="Astrologer RaajeevG Logo"> </br>
-                    <h4 class="footer-title">Astrologerrajeev's Commitment</h4>
+                    <img src="assets/images/logo/logo.png" alt="Mkelly Logo"> </br>
+                    <h4 class="footer-title">Mkelly's Commitment</h4>
                     <p class="footer-description">
-                        we promise authenticity, intention, and care <br> in everything we create.<br> Every product is pure, ethically sourced, and <br> crafted to help you reconnect with yourself <br>- while also giving back through our Karma <br> & Destiny initiative.
+                        We promise authenticity, intention, and care <br> in everything we create.<br> Every product is pure, ethically sourced, and <br> crafted to help you reconnect with yourself <br>- while also giving back through our sustainability <br> & biotechnology research initiative.
                     </p>
                 </div>
                 <div class="col-6 col-md-3 col-lg-2">
@@ -41,20 +41,20 @@
                 <div class="col-6 col-md-3 col-lg-2">
                     <h5 class="footer-title">Policies</h5>
                     <ul class="footer-links">
-                        <li><a href="https://astrologerraajeev.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://www.mkellybiotech.com/privacy-policy">Privacy Policy</a></li>
                         <li><a href="#">Return and Refund Policy</a></li>
                         <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="https://astrologerraajeev.com/terms-and-conditions">Terms of Service</a></li>
+                        <li><a href="https://www.mkellybiotech.com/terms-and-conditions">Terms of Service</a></li>
                     </ul>
                 </div>
                 
                 <div class="col-6 col-md-3 col-lg-2">
                     <h5 class="footer-title">Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="https://astrologerraajeev.com/about">About Us</a></li>
-                        <li><a href="https://astrologerraajeev.com/contact">Contact Us</a></li>
-                        <li><a href="https://astrologerraajeev.com/service">Service</a></li>
-                        <li><a href="https://astrologerraajeev.com/faq">FAQs</a></li>
+                        <li><a href="https://www.mkellybiotech.com/about-us">About Us</a></li>
+                        <li><a href="https://www.mkellybiotech.com/contact-us">Contact Us</a></li>
+                        <li><a href="https://www.mkellybiotech.com/our-products">Our Products</a></li>
+                        <li><a href="https://www.mkellybiotech.com/faq">FAQs</a></li>
                         <!--<li><a href="#">Track Order</a></li>-->
                         <!--<li><a href="#">Blogs</a></li>-->
                         <!--<li><a href="#">Sitemap</a></li>-->
@@ -64,13 +64,13 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026, Astrologerraajeevg | Designed & Developed by <a style="color: #fff;" href="https://makes360.com">Makes360</a></p>
+                <p>&copy; 2026, Mkelly | Designed & Developed by <a style="color: #fff;" href="https://makes360.com">Makes360</a></p>
             </div>
         </div>
     </footer>
-
+ 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/919999999999" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/919056555101" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -198,7 +198,7 @@
                 
                 setTimeout(() => {
                     this.innerHTML = 'Add to Cart';
-                    this.style.background = '#F5C518';
+                    this.style.background = '#054B2C';
                 }, 2000);
             });
         });

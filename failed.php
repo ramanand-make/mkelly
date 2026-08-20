@@ -12,7 +12,7 @@ $error_msg = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : 'An unkn
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Failed - AstrologerRajeevG</title>
+    <title>Payment Failed - Mkelly</title>
     <base href="<?= BASE_URL ?>">
     
     <!-- Bootstrap 5 -->
@@ -22,7 +22,7 @@ $error_msg = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : 'An unkn
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=<?= time() ?>" rel="stylesheet">
     
     <style>
         .failed-page {
@@ -57,7 +57,7 @@ $error_msg = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : 'An unkn
             font-family: 'Playfair Display', serif;
             font-size: 32px;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #000000;
             margin-bottom: 15px;
         }
         .failed-text {
@@ -76,7 +76,7 @@ $error_msg = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : 'An unkn
             display: inline-block;
         }
         .btn-retry {
-            background: #1a1a1a;
+            background: #000000;
             color: #fff;
             padding: 12px 30px;
             border-radius: 8px;
@@ -87,14 +87,14 @@ $error_msg = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : 'An unkn
             margin: 5px;
         }
         .btn-retry:hover {
-            background: #333;
+            background: #000000;
             transform: translateY(-2px);
             color: #fff;
         }
         .btn-support {
             background: transparent;
-            color: #1a1a1a;
-            border: 2px solid #1a1a1a;
+            color: #000000;
+            border: 2px solid #000000;
             padding: 10px 28px;
             border-radius: 8px;
             font-weight: 600;

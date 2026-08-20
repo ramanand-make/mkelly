@@ -70,7 +70,7 @@ License        :   Licensed under ThemeForest License
 --- treeview
 */
 :root {
-    --primary-rgb: 108, 95, 252;
+    --primary-rgb: 5, 75, 44;
     --primary-bg-color: rgb(var(--primary-rgb));
     --primary-bg-hover: rgb(var(--primary-rgb), 0.9);
     --primary-bg-border: rgb(var(--primary-rgb));
@@ -86,8 +86,8 @@ License        :   Licensed under ThemeForest License
     --primary005: rgba(var(--primary-rgb), 0.05);
     --dark-body: #292e4a;
     --dark-border: #30314e;
-    --transparent-primary: #6c5ffc;
-    --transparent-bg-rgb: 88, 76, 217;
+    --transparent-primary: #054B2C;
+    --transparent-bg-rgb: 5, 75, 44;
     --transparent-body: rgb(var(--transparent-bg-rgb));
     --transparent-theme: rgba(0, 0, 0, 0.2);
     --transparent-border: rgba(255, 255, 255, 0.1);
@@ -109,7 +109,7 @@ License        :   Licensed under ThemeForest License
     --white: #ffffff;
     --gray: #6c757d;
     --gray-dark: #343a40;
-    --primary: #6c5ffc;
+    --primary: #054B2C;
     --secondary: #6c757d;
     --success: #28a745;
     --info: #17a2b8;

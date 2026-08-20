@@ -45,7 +45,7 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=<?= time() ?>" rel="stylesheet">
     
     <style>
         .success-page {
@@ -80,7 +80,7 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
             font-family: 'Playfair Display', serif;
             font-size: 32px;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #000000;
             margin-bottom: 15px;
         }
         .success-text {
@@ -90,20 +90,20 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
             line-height: 1.6;
         }
         .btn-continue {
-            background: #F5C518;
-            color: #1a1a1a;
+            background: #054B2C;
+            color: #ffffff;
             padding: 12px 30px;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(245, 197, 24, 0.3);
+            box-shadow: 0 4px 15px rgba(5, 75, 44, 0.3);
         }
         .btn-continue:hover {
-            background: #D4AF37;
+            background: #C11712;
             transform: translateY(-2px);
-            color: #1a1a1a;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -123,7 +123,7 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
 
             <p class="success-text">
                 Thank you for booking your consultation with
-                <strong>Astrologer RaajeevG</strong>.
+                <strong>Mkelly</strong>.
             </p>
 
             <?php if (!empty($booking_id)) : ?>
@@ -136,7 +136,7 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
             <p class="success-text">
                 A confirmation email has been sent to your registered email address.
                 <br>
-                Astrologer RaajeevG will contact you shortly.
+                Mkelly will contact you shortly.
             </p>
 
             <a href="./" class="btn-continue">Back to Home</a>

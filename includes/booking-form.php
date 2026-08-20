@@ -17,8 +17,8 @@
   --rg-lavender: #a78bfa;
   --rg-pale:     #c4b5fd;
   --rg-white:    #f0e6ff;
-  --rg-gold:     #d4af37;
-  --rg-gold-lt:  #f0d060;
+  --rg-gold:     #C11712;
+  --rg-gold-lt:  #ff8b87;
   --rg-error:    #f87171;
   --rg-success:  #4ade80;
   --rg-radius:   12px;
@@ -43,7 +43,7 @@
   width: 100%;
   max-width: 680px;
   overflow: hidden;
-  box-shadow: 0 24px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(212,175,55,.1);
+  box-shadow: 0 24px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(193,23,18,.15);
 }
 
 /* ── Header ────────────────────────────────────────────────────── */
@@ -59,7 +59,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(212,175,55,.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(193,23,18,.15) 0%, transparent 70%);
   pointer-events: none;
 }
 .rg-header-moon { font-size: 36px; display: block; margin-bottom: 10px; animation: rg-float 4s ease-in-out infinite; }
@@ -120,8 +120,8 @@
   position: relative;
   z-index: 1;
 }
-.rg-step.active .rg-step-dot  { border-color: var(--rg-gold); background: var(--rg-gold); color: var(--rg-night); font-weight: bold; box-shadow: 0 0 12px rgba(212,175,55,.5); }
-.rg-step.done .rg-step-dot    { border-color: var(--rg-gold); background: var(--rg-gold); color: var(--rg-night); }
+.rg-step.active .rg-step-dot  { border-color: var(--rg-gold); background: var(--rg-gold); color: #fff; font-weight: bold; box-shadow: 0 0 12px rgba(193,23,18,.5); }
+.rg-step.done .rg-step-dot    { border-color: var(--rg-gold); background: var(--rg-gold); color: #fff; }
 .rg-step-label { font-size: 10px; color: var(--rg-lavender); letter-spacing: .5px; text-align: center; }
 .rg-step.active .rg-step-label { color: var(--rg-gold); }
 
@@ -178,7 +178,7 @@
 }
 .rg-field select option { background: var(--rg-deep); }
 .rg-field input:focus,
-.rg-field select:focus { border-color: var(--rg-gold); box-shadow: 0 0 0 3px rgba(212,175,55,.15); }
+.rg-field select:focus { border-color: var(--rg-gold); box-shadow: 0 0 0 3px rgba(193,23,18,.25); }
 .rg-field input::placeholder { color: var(--rg-violet); }
 .rg-field input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(.7) sepia(1) saturate(3) hue-rotate(5deg); cursor: pointer; }
 
@@ -202,7 +202,7 @@
 }
 .rg-service-card:hover { border-color: var(--rg-lavender); background: rgba(74,58,122,.2); }
 .rg-service-card input[type="radio"] { position: absolute; opacity: 0; }
-.rg-service-card.selected { border-color: var(--rg-gold); background: rgba(212,175,55,.08); }
+.rg-service-card.selected { border-color: var(--rg-gold); background: rgba(193,23,18,.08); }
 .rg-service-card.selected .rg-sc-check { opacity: 1;margin-left:10px; }
 
 .rg-sc-top { display: flex; align-items: center; justify-content: space-between; }
@@ -265,13 +265,13 @@
   font-family: inherit;
 }
 .rg-country-btn:hover  { border-color: var(--rg-lavender); }
-.rg-country-btn.active { border-color: var(--rg-gold); background: rgba(212,175,55,.1); }
+.rg-country-btn.active { border-color: var(--rg-gold); background: rgba(193,23,18,.1); }
 .rg-country-btn .rg-cb-flag { font-size: 22px; display: block; margin-bottom: 4px; }
 .rg-country-btn .rg-cb-name { color: var(--rg-white); font-size: 13px; }
 
 /* ── Amount Display ────────────────────────────────────────────── */
 .rg-amount-box {
-  background: linear-gradient(135deg, rgba(212,175,55,.15), rgba(45,27,105,.4));
+  background: linear-gradient(135deg, rgba(193,23,18,.15), rgba(45,27,105,.4));
   border: 1px solid var(--rg-gold);
   border-radius: 12px;
   padding: 20px 24px;
@@ -299,11 +299,11 @@
 }
 .rg-btn-back { background: transparent; border: 1px solid var(--rg-violet); color: var(--rg-pale); }
 .rg-btn-back:hover { border-color: var(--rg-lavender); color: var(--rg-white); }
-.rg-btn-next { background: linear-gradient(135deg, #b8961e, var(--rg-gold)); color: var(--rg-night); box-shadow: 0 4px 20px rgba(212,175,55,.3); }
-.rg-btn-next:hover { transform: translateY(-1px); box-shadow: 0 6px 28px rgba(212,175,55,.45); }
+.rg-btn-next { background: linear-gradient(135deg, #054B2C, #022515); color: #fff; box-shadow: 0 4px 20px rgba(5,75,44,.3); }
+.rg-btn-next:hover { transform: translateY(-1px); box-shadow: 0 6px 28px rgba(5,75,44,.45); }
 .rg-btn-next:disabled { opacity: .5; cursor: not-allowed; transform: none; }
-.rg-btn-submit { background: linear-gradient(135deg, #1a6b3c, #25a55a); color: #fff; }
-.rg-btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(37,165,90,.35); }
+.rg-btn-submit { background: linear-gradient(135deg, #C11712, #7a0e0b); color: #fff; }
+.rg-btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(193,23,18,.35); }
 
 /* ── Error msg ─────────────────────────────────────────────────── */
 .rg-err { color: var(--rg-error); font-size: 12px; margin-top: 5px; display: none; }
@@ -910,7 +910,7 @@ async function rgSubmit() {
             email: payload.email,
             contact: payload.whatsapp
         },
-        theme: { color: "#d4af37" },
+        theme: { color: "#C11712" },
         modal: {
             ondismiss: function() {
                 document.getElementById('rg-submit-row').style.display = 'flex';

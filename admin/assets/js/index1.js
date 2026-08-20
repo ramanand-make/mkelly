@@ -494,7 +494,7 @@ $(function (e) {
     // WORLD MAP MARKER
     $('#world-map-markers1').vectorMap({
         map: 'world_mill_en',
-        scaleColors: ['#6c5ffc', '#e82646', '#05c3fb'],
+        scaleColors: ['#054B2C', '#e82646', '#05c3fb'],
 
         normalizeFunction: 'polynomial',
 
@@ -512,7 +512,7 @@ $(function (e) {
         markerStyle: {
             initial: {
                 r: 6,
-                'fill': '#6c5ffc',
+                'fill': '#054B2C',
                 'fill-opacity': 0.9,
                 'stroke': '#fff',
                 'stroke-width': 9,
@@ -575,8 +575,8 @@ myCanvas.height = "330";
 
 var myCanvasContext = myCanvas.getContext("2d");
 var gradientStroke1 = myCanvasContext.createLinearGradient(0, 80, 0, 280);
-gradientStroke1.addColorStop(0, 'rgba(108, 95, 252, 0.8)');
-gradientStroke1.addColorStop(1, 'rgba(108, 95, 252, 0.2) ');
+gradientStroke1.addColorStop(0, 'rgba(5, 75, 44, 0.8)');
+gradientStroke1.addColorStop(1, 'rgba(5, 75, 44, 0.2) ');
 
 var gradientStroke2 = myCanvasContext.createLinearGradient(0, 80, 0, 280);
 gradientStroke2.addColorStop(0, 'rgba(5, 195, 251, 0.8)');
@@ -684,8 +684,8 @@ myChart = new Chart(myCanvas, {
 function index(myVarVal, myVarVal1) {
     'use strict'
     let gradientStroke = myCanvasContext.createLinearGradient(0, 80, 0, 280);;
-    gradientStroke.addColorStop(0, `rgba(${myVarVal}, 0.8)` || 'rgba(108, 95, 252, 0.8)');
-    gradientStroke.addColorStop(1, `rgba(${myVarVal}, 0.2)` || 'rgba(108, 95, 252, 0.2) ');
+    gradientStroke.addColorStop(0, `rgba(${myVarVal}, 0.8)` || 'rgba(5, 75, 44, 0.8)');
+    gradientStroke.addColorStop(1, `rgba(${myVarVal}, 0.2)` || 'rgba(5, 75, 44, 0.2) ');
 
     myChart.data.datasets[0] = {
         label: 'Total Sales',

@@ -10,7 +10,7 @@
 .money-content-section h2, 
 .money-content-section h3, 
 .money-content-section h4 {
-    color: #1a1a1a;
+    color: #000000;
     font-weight: 600;
     margin-bottom: 1rem;
     margin-top: 2rem;
@@ -53,8 +53,8 @@
     margin-top: 1rem;
 }
 .money-content-section .tag-list span {
-    background: #FFF9E6;
-    color: #D4AF37;
+    background: #FCE8E6;
+    color: #C11712;
     border: 1px solid rgba(245, 197, 24, 0.2);
     padding: 0.5rem 1.25rem;
     border-radius: 9999px;
@@ -87,7 +87,7 @@
             </p>
 
             <p>
-                At  AstrologerRaageeevG, this collection focuses on bracelets made with powerful crystals
+                At Mkelly, this collection focuses on bracelets made with powerful crystals
                 and Rudraksha beads, known for their connection with prosperity and abundance.
                 These are not just accessories; they are meaningful items that attract money while
                 helping you stay focused on your financial goals.
@@ -192,7 +192,7 @@
 
             <!-- WHY BUY -->
             <div class="content-block">
-                <h3>Why Buy Money Attraction Products from AstrologerRaageeevG?</h3>
+                <h3>Why Buy Money Attraction Products from Mkelly?</h3>
 
                 <p>
                     Different minerals and elements are believed to influence

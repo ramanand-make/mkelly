@@ -39,15 +39,15 @@ include LAYOUT_PATH . "/head.php";
     border-radius: 20px;
     cursor: pointer;
     border: none;
-    background: linear-gradient(135deg, #6a0dad, #9b59b6);
+    background: linear-gradient(135deg, #054B2C, #022515);
     color: #fff;
-    box-shadow: 0 2px 8px rgba(106,13,173,.35);
+    box-shadow: 0 2px 8px rgba(5,75,44,.35);
     transition: all .2s ease;
 }
 .horo-toggle-btn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(106,13,173,.45);
-    background: linear-gradient(135deg, #7b1ce0, #a569bd);
+    box-shadow: 0 4px 12px rgba(193,23,18,.45);
+    background: linear-gradient(135deg, #C11712, #7a0e0b);
 }
 .horo-toggle-btn .horo-count {
     background: rgba(255,255,255,.25);
@@ -77,15 +77,15 @@ include LAYOUT_PATH . "/head.php";
 .horo-panel.active { display: flex; }
 
 .horo-panel-inner {
-    background: linear-gradient(160deg, #1a1040 0%, #0d0920 100%);
-    border: 1px solid rgba(155,89,182,.4);
+    background: linear-gradient(160deg, #022515 0%, #0a081e 100%);
+    border: 1px solid rgba(5,75,44,.4);
     border-radius: 16px;
     width: 100%;
     max-width: 720px;
     max-height: 85vh;
     overflow-y: auto;
     padding: 30px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.7), 0 0 0 1px rgba(155,89,182,.15);
+    box-shadow: 0 20px 60px rgba(0,0,0,.7), 0 0 0 1px rgba(5,75,44,.15);
     position: relative;
     animation: horoSlideIn .25s ease;
 }
@@ -100,12 +100,12 @@ include LAYOUT_PATH . "/head.php";
     justify-content: space-between;
     margin-bottom: 20px;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(155,89,182,.3);
+    border-bottom: 1px solid rgba(5,75,44,.3);
 }
 .horo-panel-title {
     font-size: 16px;
     font-weight: 700;
-    color: #d4af37;
+    color: #C11712;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     display: flex;
@@ -115,23 +115,23 @@ include LAYOUT_PATH . "/head.php";
 .horo-panel-title .star-icon { font-size: 18px; }
 .horo-panel-subtitle {
     font-size: 12px;
-    color: #a78bfa;
+    color: #a3b899;
     margin-top: 2px;
 }
 .horo-close-btn {
     width: 34px; height: 34px;
     display: flex; align-items: center; justify-content: center;
-    background: rgba(155,89,182,.2);
-    border: 1px solid rgba(155,89,182,.3);
+    background: rgba(193,23,18,.2);
+    border: 1px solid rgba(193,23,18,.3);
     border-radius: 50%;
-    color: #c4b5fd;
+    color: #fca5a5;
     font-size: 18px;
     cursor: pointer;
     line-height: 1;
     transition: all .2s;
 }
 .horo-close-btn:hover {
-    background: rgba(155,89,182,.4);
+    background: rgba(193,23,18,.4);
     color: #fff;
     transform: rotate(90deg);
 }
@@ -140,19 +140,19 @@ include LAYOUT_PATH . "/head.php";
 .horo-cards { display: flex; flex-direction: column; gap: 14px; }
 .horo-card {
     background: rgba(255,255,255,.04);
-    border: 1px solid rgba(155,89,182,.2);
+    border: 1px solid rgba(5,75,44,.2);
     border-radius: 12px;
     padding: 18px 20px;
     position: relative;
     transition: border-color .2s;
 }
-.horo-card:hover { border-color: rgba(212,175,55,.4); }
+.horo-card:hover { border-color: rgba(5,75,44,.4); }
 
 .horo-card-badge {
     position: absolute;
     top: -10px; left: 16px;
-    background: linear-gradient(135deg, #d4af37, #b8860b);
-    color: #000;
+    background: linear-gradient(135deg, #054B2C, #022515);
+    color: #fff;
     font-size: 10px;
     font-weight: 800;
     letter-spacing: .8px;
@@ -163,7 +163,7 @@ include LAYOUT_PATH . "/head.php";
 .horo-card-name {
     font-size: 15px;
     font-weight: 700;
-    color: #f0e6ff;
+    color: #e6f4ea;
     margin-bottom: 12px;
     margin-top: 4px;
     display: flex;
@@ -172,7 +172,7 @@ include LAYOUT_PATH . "/head.php";
 }
 .horo-card-name .person-icon {
     width: 28px; height: 28px;
-    background: linear-gradient(135deg,#6a0dad,#9b59b6);
+    background: linear-gradient(135deg, #054B2C, #022515);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-size: 13px;
@@ -193,7 +193,7 @@ include LAYOUT_PATH . "/head.php";
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #a78bfa;
+    color: #a3b899;
     margin-bottom: 4px;
     display: flex;
     align-items: center;
@@ -202,16 +202,16 @@ include LAYOUT_PATH . "/head.php";
 .horo-field-value {
     font-size: 13px;
     font-weight: 600;
-    color: #f0e6ff;
+    color: #ffffff;
     word-break: break-word;
 }
-.horo-field-value.empty { color: #4a3a7a; font-style: italic; font-size: 11px; }
+.horo-field-value.empty { color: #6b7280; font-style: italic; font-size: 11px; }
 
 /* ── Empty State ───────────────────────────────────────────────────────── */
 .horo-empty {
     text-align: center;
     padding: 30px;
-    color: #6a5a8a;
+    color: #9ca3af;
 }
 .horo-empty .empty-icon { font-size: 40px; margin-bottom: 10px; }
 .horo-empty p { margin: 0; font-size: 13px; }

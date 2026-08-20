@@ -488,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
                    
                      "amount": Math.round(data.amount * 100),
                     "currency": "INR",
-                    "name": "AstrologerRajeevG",
+                    "name": "Mkelly",
                     "description": "Order Payment",
                     "handler": function (response){
                         // Verify Payment
@@ -500,7 +500,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         "contact": formData.get('phone')
                     },
                     "theme": {
-                        "color": "#F5C518"
+                        "color": "#054B2C"
                     },
                     "modal": {
                         "ondismiss": function() {

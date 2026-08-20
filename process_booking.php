@@ -222,8 +222,7 @@ if ($isPost && (!empty($data['astro_form_submit']) || !empty($data['astro_form_p
 
 function sendBookingEmail($booking)
 {
-    $to      = $booking['email'];
-    $subject = "Booking Confirmed – Astrologer RaajeevG (#{$booking['id']})";
+    $subject = "Booking Confirmed – Mkelly (#{$booking['id']})";
 
     $horoscope_html = '';
 
@@ -232,12 +231,12 @@ function sendBookingEmail($booking)
             $n = $i + 1;
 
             $horoscope_html .= "
-            <tr style='background:" . ($i % 2 == 0 ? '#f9f6ff' : '#fff') . ";'>
-                <td style='padding:8px 12px;border:1px solid #e0d4f7;'>{$n}</td>
-                <td style='padding:8px 12px;border:1px solid #e0d4f7;'>" . htmlspecialchars($h['name'] ?? '') . "</td>
-                <td style='padding:8px 12px;border:1px solid #e0d4f7;'>" . htmlspecialchars($h['dob'] ?? '') . "</td>
-                <td style='padding:8px 12px;border:1px solid #e0d4f7;'>" . htmlspecialchars($h['time'] ?? '') . "</td>
-                <td style='padding:8px 12px;border:1px solid #e0d4f7;'>" . htmlspecialchars($h['place'] ?? '') . "</td>
+            <tr style='background:" . ($i % 2 == 0 ? '#f4f6f4' : '#fff') . ";'>
+                <td style='padding:8px 12px;border:1px solid #e2eae2;'>{$n}</td>
+                <td style='padding:8px 12px;border:1px solid #e2eae2;'>" . htmlspecialchars($h['name'] ?? '') . "</td>
+                <td style='padding:8px 12px;border:1px solid #e2eae2;'>" . htmlspecialchars($h['dob'] ?? '') . "</td>
+                <td style='padding:8px 12px;border:1px solid #e2eae2;'>" . htmlspecialchars($h['time'] ?? '') . "</td>
+                <td style='padding:8px 12px;border:1px solid #e2eae2;'>" . htmlspecialchars($h['place'] ?? '') . "</td>
             </tr>";
         }
     }
@@ -248,35 +247,32 @@ function sendBookingEmail($booking)
     <head>
         <meta charset='UTF-8'>
     </head>
-    <body style='font-family:Georgia,serif;background:#0d0b1e;color:#f0e6ff;margin:0;padding:20px;'>
+    <body style='font-family:\"Inter\",sans-serif;background:#f4f6f4;color:#333333;margin:0;padding:20px;'>
 
-    <div style='max-width:600px;margin:0 auto;background:#1a1535;border:1px solid #4a3a7a;border-radius:12px;overflow:hidden;'>
+    <div style='max-width:600px;margin:0 auto;background:#ffffff;border:1px solid #e2eae2;border-radius:12px;overflow:hidden;'>
 
-        <div style='background:linear-gradient(135deg,#2d1b69,#1a0f3c);padding:32px;text-align:center;'>
-        <div style='margin-bottom:8px;'>
-            <img src='https://shop.astrologerraajeev.com/assets/images/ganesh.png' alt='Lord Ganesh' style='width:50px;height:auto;'>
-        </div>
-            <h1 style='color:#d4af37;font-size:22px;margin:0;letter-spacing:2px;'>
-                ASTROLOGER RAAJEEVG
+        <div style='background:linear-gradient(135deg,#054B2C,#C11712);padding:32px;text-align:center;'>
+            <h1 style='color:#ffffff;font-size:22px;margin:0;letter-spacing:2px;'>
+                MKELLY
             </h1>
-            <p style='color:#a78bfa;margin:8px 0 0;font-size:13px;letter-spacing:1px;'>
+            <p style='color:rgba(255,255,255,0.85);margin:8px 0 0;font-size:13px;letter-spacing:1px;'>
                 BOOKING CONFIRMED
             </p>
         </div>
 
         <div style='padding:32px;'>
 
-            <p style='color:#c4b5fd;margin:0 0 24px;'>
-                Dear <strong style='color:#f0e6ff;'>" . htmlspecialchars($booking['name']) . "</strong>,
+            <p style='color:#555555;margin:0 0 24px;'>
+                Dear <strong style='color:#333333;'>" . htmlspecialchars($booking['name']) . "</strong>,
             </p>
 
-            <p style='color:#c4b5fd;line-height:1.7;'>
+            <p style='color:#555555;line-height:1.7;'>
                 Your booking has been received successfully.
-                Astrologer RaajeevG will contact you shortly on
-                <strong style='color:#d4af37;'>" . htmlspecialchars($booking['whatsapp']) . "</strong>.
+                Mkelly will contact you shortly on
+                <strong style='color:#C11712;'>" . htmlspecialchars($booking['whatsapp']) . "</strong>.
             </p>
 
-            <div style='background:#0d0b1e;border:1px solid #4a3a7a;border-radius:8px;padding:20px;margin:24px 0;'>
+            <div style='background:#f9faf9;border:1px solid #e2eae2;border-radius:8px;padding:20px;margin:24px 0;'>
                 <table style='width:100%;border-collapse:collapse;font-size:13px;'>
 
                     <tr>
@@ -295,13 +291,13 @@ function sendBookingEmail($booking)
 
                     <tr>
                         <td style='color:#a78bfa;padding:6px 0;'>Amount</td>
-                        <td style='color:#d4af37;font-weight:bold;'>
+                        <td style='color:#C11712;font-weight:bold;'>
                             " . htmlspecialchars($booking['amount']) . "
                         </td>
                     </tr>
                     <tr>
                         <td style='color:#a78bfa;padding:6px 0;'>Place</td>
-                        <td style='color:#d4af37;font-weight:bold;'>
+                        <td style='color:#C11712;font-weight:bold;'>
                             " . htmlspecialchars($booking['place']) . "
                         </td>
                     </tr>
@@ -318,14 +314,14 @@ function sendBookingEmail($booking)
 
     if (!empty($booking['horoscopes'])) {
         $message .= "
-            <h3 style='color:#d4af37;font-size:14px;letter-spacing:1px;margin:24px 0 12px;'>
+            <h3 style='color:#C11712;font-size:14px;letter-spacing:1px;margin:24px 0 12px;'>
                 HOROSCOPE DETAILS SUBMITTED
             </h3>
 
             <table style='width:100%;border-collapse:collapse;font-size:12px;color:#1a1535;'>
 
                 <thead>
-                    <tr style='background:#d4af37;'>
+                    <tr style='background:#C11712;'>
                         <th style='padding:8px 12px;text-align:left;'>#</th>
                         <th style='padding:8px 12px;text-align:left;'>Name</th>
                         <th style='padding:8px 12px;text-align:left;'>DOB</th>
@@ -377,7 +373,7 @@ function sendBookingEmail($booking)
 
         $mail->setFrom(
             'info@astrologerraajeev.com',
-            'Astrologer RaajeevG'
+            'Mkelly'
         );
 
         $mail->addAddress(

@@ -52,7 +52,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 24px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #000000;
     margin: 0;
 }
 
@@ -96,7 +96,7 @@
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #1a1a1a;
+    color: #000000;
 }
 
 .form-row {
@@ -132,8 +132,8 @@
 }
 
 .form-group input:focus {
-    border-color: #F5C518;
-    box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.1);
+    border-color: #054B2C;
+    box-shadow: 0 0 0 3px rgba(5, 75, 44, 0.1);
 }
 
 .checkout-items {
@@ -163,7 +163,7 @@
     font-size: 14px;
     font-weight: 600;
     margin: 0 0 5px 0;
-    color: #1a1a1a;
+    color: #000000;
 }
 
 .chk-item-info p {
@@ -194,7 +194,7 @@
 .tot-row.grand-total {
     font-size: 18px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #000000;
     border-top: 1px solid #e0e0e0;
     padding-top: 15px;
     margin-top: 5px;
@@ -202,8 +202,8 @@
 
 .checkout-pay-btn {
     width: 100%;
-    background: #F5C518;
-    color: #1a1a1a;
+    background: #054B2C;
+    color: #ffffff;
     border: none;
     padding: 15px;
     border-radius: 10px;
@@ -212,12 +212,13 @@
     margin-top: 20px;
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 4px 15px rgba(245, 197, 24, 0.3);
+    box-shadow: 0 4px 15px rgba(5, 75, 44, 0.3);
 }
 
 .checkout-pay-btn:hover {
-    background: #E5B510;
+    background: #C11712;
     transform: translateY(-2px);
+    color: #ffffff;
 }
 
 .checkout-secure-badges {
