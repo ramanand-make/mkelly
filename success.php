@@ -47,14 +47,14 @@ if ($order_id > 0) {
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.hostinger.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'info@astrologerraajeev.com';
+                $mail->Username   = 'info@mkellybiotech.com';
                 $mail->Password   = 'A1Jzwge5Ka+';
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                 $mail->Port       = 465;
 
                 $mail->setFrom(
-                    'info@astrologerraajeev.com',
-                    'Mkelly Store'
+                    'info@mkellybiotech.com',
+                    'Mkelly Biotech'
                 );
 
                 // Customer
@@ -65,8 +65,8 @@ if ($order_id > 0) {
 
                 // Admin
                 $mail->addBCC(
-                    'rajeev.yadav0506@gmail.com',
-                    'Mkelly'
+                    'info@mkellybiotech.com',
+                    'Mkelly Biotech'
                 );
 
                 $mail->isHTML(true);
@@ -279,7 +279,7 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Successful - AstroRaajeevG</title>
+    <title>Payment Successful - Mkelly Biotech</title>
     <base href="<?= BASE_URL ?>">
     
     <!-- Bootstrap 5 -->

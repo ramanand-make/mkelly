@@ -367,10 +367,10 @@
     <div class="rg-header">
       <!--<span class="rg-header-moon">🌙</span>-->
       <span class="rg-header-moon"><div style='margin-bottom:8px;display:flex;justify-content:center;'>
-            <img src='https://shop.astrologerraajeev.com/assets/images/ganesh.png' alt='Lord Ganesh' style='width:50px;height:auto;'>
+            <img src='assets/images/logo/logo.png' alt='Mkelly Biotech' style='width:100px;height:auto;'>
         </div></span>
       
-      <h2>Astrologer RaajeevG</h2>
+      <h2>Mkelly Biotech</h2>
       <p>Book Your Consultation</p>
     </div>
 
@@ -550,7 +550,7 @@
         <span class="rg-success-icon">🌟</span>
         <h3>Booking Successful!</h3>
         <p><strong>You can check your mail for confirmation.</strong></p>
-        <p>Astrologer Raajeev G will contact you shortly.</p>
+        <p>Our Mkelly Biotech consultant will contact you shortly.</p>
         <div class="rg-booking-id" id="rg-success-id">Booking ID: —</div>
         <p style="color:var(--rg-pale);font-size:13px;">For any other details, please reach out on WhatsApp:</p>
         <a href="https://wa.me/919811294025" class="rg-wa-btn" target="_blank">
@@ -875,7 +875,7 @@ async function rgSubmit() {
         key: data.razorpay_key,
         amount: data.amount * 100,
         currency: "INR",
-        name: "Astrologer RaajeevG",
+        name: "Mkelly Biotech",
         description: "Booking Consultation",
         order_id: data.order_id,
         handler: async function(response) {

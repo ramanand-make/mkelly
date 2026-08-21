@@ -91,7 +91,7 @@ include LAYOUT_PATH . "/head.php";
                                                         <td><?= htmlspecialchars($cat['name']) ?></td>
                                                         <td>
                                                             <?php 
-                                                                $catLink = "https://shop.astrologerraajeev.com/collection/" . htmlspecialchars($cat['slug'] ?? '');
+                                                                $catLink = "http://localhost/mkelly/collection/" . htmlspecialchars($cat['slug'] ?? '');
                                                             ?>
                                                             <div class="d-flex align-items-center gap-2">
                                                                 <a href="<?= $catLink ?>" target="_blank" class="btn btn-sm btn-outline-primary" title="Open Link">

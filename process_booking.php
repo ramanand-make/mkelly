@@ -1,6 +1,6 @@
 <?php
 /**
- * Backend Handler for Astrologer RaajeevG Booking Form
+ * Backend Handler for Mkelly Biotech Booking Form
  */
  if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     require_once __DIR__ . '/vendor/autoload.php';
@@ -364,7 +364,7 @@ function sendBookingEmail($booking)
         $mail->isSMTP();
         $mail->Host       = 'smtp.hostinger.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'info@astrologerraajeev.com';
+        $mail->Username   = 'info@mkellybiotech.com';
         $mail->Password   = 'A1Jzwge5Ka+';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
@@ -372,8 +372,8 @@ function sendBookingEmail($booking)
         $mail->CharSet = 'UTF-8';
 
         $mail->setFrom(
-            'info@astrologerraajeev.com',
-            'Mkelly'
+            'info@mkellybiotech.com',
+            'Mkelly Biotech'
         );
 
         $mail->addAddress(

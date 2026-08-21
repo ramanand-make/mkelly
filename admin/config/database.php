@@ -32,3 +32,5 @@ function getSashDBConnection(): ?mysqli
     }
 }
 
+
+

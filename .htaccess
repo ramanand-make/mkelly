@@ -14,3 +14,8 @@ RewriteRule ^product\.php$ product/%1? [R=301,L]
 
 # Internal rewrite for /product/product-name to product.php?slug=product-name
 RewriteRule ^product/([^/]+)/?$ product.php?slug=$1 [L,QSA]
+
+# Hide .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

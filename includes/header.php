@@ -53,31 +53,26 @@ require_once __DIR__ . '/functions.php';
         
            
         
-            <!-- Rudraksha -->
+            <!-- Mkelly Products Dropdown -->
             <div class="dropdown-custom">
-                <a href="collection/rudraksha" class="nav-link-custom">
-                    Products
+                <a href="collection/powder" class="nav-link-custom">
+                    Our Products
                     <i class="fas fa-chevron-down ms-1" style="font-size: 10px;"></i>
                 </a>
         
                 <div class="dropdown-menu-custom">
-                    <a href="collection/bracelet">Bracelets</a>
-                    <a href="collection/karungali">Karungali</a>
-                    <a href="collection/rudraksha">Rudraksha</a>
-                    <a href="collection/evil-eye">Evil Eye</a>
-                    <a href="collection/pyrite">Pyrite</a>
-                    <a href="collection/yantras">Yantras</a>
-                    <a href="collection/gemstones">Gemstones</a>
-                    <a href="collection/pendents">Pendents</a>
-                    <a href="collection/trees">Trees</a>
-                    <a href="collection/pooja-need">Puja Products</a>
-                    <a href="collection/towers-tumbles">Towers & Tumbles</a>
-                    <!--<a href="collection/ganesh-rudraksha">Pendents</a>-->
+                    <a href="collection/powder">Powder</a>
+                    <a href="collection/atta">Atta</a>
+                    <a href="collection/supplements">Supplements</a>
+                    <a href="collection/wellness">Wellness</a>
+                    <a href="collection/biotech-products">Biotech Products</a>
+                    <hr style="margin: 6px 0; border-color: #eee;">
+                    
                 </div>
             </div>
         
-            <!-- Gemstones -->
-            <div class="dropdown-custom">
+            <!-- Shop By Purpose -->
+            <!-- <div class="dropdown-custom">
                 <a href="collection/gemstones" class="nav-link-custom">
                     Shop By Purpose
                     <i class="fas fa-chevron-down ms-1" style="font-size: 10px;"></i>
@@ -86,17 +81,17 @@ require_once __DIR__ . '/functions.php';
                 <div class="dropdown-menu-custom">
                     <a href="collection/love">Love</a>
                     <a href="collection/money">Money</a>
-                    <a href="collection/carrer">Carrer</a>
+                    <a href="collection/career">Career</a>
                     <a href="collection/health">Health</a>
                     <a href="collection/marriage">Marriage</a>
                     <a href="collection/gifting">Gifts</a>
                 </div>
-            </div>
+            </div> -->
         
-            <!-- Bracelets -->
-            <div class="dropdown-custom">
+            <!-- Zodiac -->
+            <!-- <div class="dropdown-custom">
                 <a href="collection/bracelets" class="nav-link-custom">
-                    Zudiac
+                    Zodiac
                     <i class="fas fa-chevron-down ms-1" style="font-size: 10px;"></i>
                 </a>
         
@@ -112,27 +107,22 @@ require_once __DIR__ . '/functions.php';
                     <a href="collection/sagittarius">Sagittarius</a>
                     <a href="collection/capricornus">Capricornus</a>
                     <a href="collection/aquarius">Aquarius</a>
-                    <a href="collection/pieses">Pieses</a>
+                    <a href="collection/pisces">Pisces</a>
                     
                 </div>
-            </div>
+            </div> -->
         
             <!-- Static Links -->
-            <a href="collection/combos" class="nav-link-custom">Combos</a>
+            <a href="about-us" class="nav-link-custom">About Us</a>
         
-            <a href="collection/gifting" class="nav-link-custom">Gifting</a>
+            <a href="our-products" class="nav-link-custom">Our Products</a>
+            <a href="training-and-internship" class="nav-link-custom">Training & Internship</a>
+            <a href="faq" class="nav-link-custom">FAQ</a>
         
-            <a href="collection/siddh-collection" class="nav-link-custom">
-                Siddh Collections
+            <a href="privacy-policy" class="nav-link-custom">
+                Policies
             </a>
-        
-            <a href="collection/pooja-need" class="nav-link-custom">
-                Pooja Need
-            </a>
-        
-            <a href="collection/mala" class="nav-link-custom">
-                Mala
-            </a>
+            
         
            
         
@@ -540,13 +530,21 @@ require_once __DIR__ . '/functions.php';
 
     <div class="mobile-menu-content">
 
-        <!-- Products -->
+        <!-- Our Products -->
         <div class="mobile-dropdown">
             <button class="mobile-dropdown-btn">
-                Products
+                Our Products
                 <i class="fas fa-chevron-down"></i>
             </button>
             <div class="mobile-dropdown-menu">
+                <strong style="padding: 6px 16px; display:block; font-size:11px; color:#054B2C; text-transform:uppercase;">Mkelly Biotech</strong>
+                <a href="collection/powder">Powder</a>
+                <a href="collection/atta">Atta</a>
+                <a href="collection/supplements">Supplements</a>
+                <a href="collection/wellness">Wellness</a>
+                <a href="collection/biotech-products">Biotech Products</a>
+                <hr style="margin: 6px 0;">
+                <strong style="padding: 6px 16px; display:block; font-size:11px; color:#666; text-transform:uppercase;">Collections</strong>
                 <a href="collection/bracelet">Bracelets</a>
                 <a href="collection/karungali">Karungali</a>
                 <a href="collection/rudraksha">Rudraksha</a>
@@ -556,8 +554,7 @@ require_once __DIR__ . '/functions.php';
                 <a href="collection/gemstones">Gemstones</a>
                 <a href="collection/pendents">Pendents</a>
                 <a href="collection/trees">Trees</a>
-                <a href="collection/puja-products">Puja Products</a>
-                <a href="collection/towers-tumbles">Towers & Tumbles</a>
+                <a href="collection/pooja-need">Puja Products</a>
             </div>
         </div>
 
@@ -570,17 +567,17 @@ require_once __DIR__ . '/functions.php';
             <div class="mobile-dropdown-menu">
                 <a href="collection/love">Love</a>
                 <a href="collection/money">Money</a>
-                <a href="collection/carrer">Carrer</a>
+                <a href="collection/career">Career</a>
                 <a href="collection/health">Health</a>
-                <a href="collection/merrige">Merrige</a>
+                <a href="collection/marriage">Marriage</a>
                 <a href="collection/gifting">Gifts</a>
             </div>
         </div>
 
-        <!-- Zudiac -->
+        <!-- Zodiac -->
         <div class="mobile-dropdown">
             <button class="mobile-dropdown-btn">
-                Zudiac
+                Zodiac
                 <i class="fas fa-chevron-down"></i>
             </button>
             <div class="mobile-dropdown-menu">
@@ -595,17 +592,16 @@ require_once __DIR__ . '/functions.php';
                 <a href="collection/sagittarius">Sagittarius</a>
                 <a href="collection/capricornus">Capricornus</a>
                 <a href="collection/aquarius">Aquarius</a>
-                <a href="collection/pieses">Pieses</a>
+                <a href="collection/pisces">Pisces</a>
             </div>
         </div>
 
         <!-- Static Links -->
-        <a href="collection/combo" class="mobile-link">Combo</a>
-        <a href="collection/gifting" class="mobile-link">Gifting</a>
-        <a href="collection/siddh-collections" class="mobile-link">Siddh Collections</a>
-        <a href="collection/pooja-need" class="mobile-link">Pooja Need</a>
-        <a href="collection/mala" class="mobile-link">Mala</a>
-
+        <a href="about-us" class="mobile-link">About Us</a>
+        <a href="our-products" class="mobile-link">Our Products</a>
+        <a href="training-and-internship" class="mobile-link">Training & Internship</a>
+        <a href="faq" class="mobile-link">FAQ</a>
+        <a href="privacy-policy" class="mobile-link">Policies</a>
     </div>
 </div>
 

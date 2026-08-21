@@ -373,7 +373,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                         </div>
                     </div>
                     <div class="accordion-item py-6">
-                       <img src="assets/images/loger RaajeevG.jpg" alt=""/>
+                       <img src="assets/images/logo/logo.png" alt="Mkelly Biotech" style="max-width:120px;"/>
                     </div>
                 </div>
 

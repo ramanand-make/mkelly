@@ -2579,6 +2579,10 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+.heroSwiper .swiper-pagination {
+    bottom: 25px !important;
+    z-index: 10;
+}
 .heroSwiper .swiper-pagination-bullet {
     background: #ffffff;
     opacity: 0.5;

@@ -15,51 +15,51 @@
                     </p>
                 </div>
                 <div class="col-6 col-md-3 col-lg-2">
-                    <h5 class="footer-title">Shop By Purpose</h5>
-                    <ul class="footer-links">
-                        <li><a href="collection/love">Love</a></li>
-                        <li><a href="collection/money">Money</a></li>
-                        <li><a href="collection/career">Career</a></li>
-                        <li><a href="collection/health">Health</a></li>
-                        <li><a href="collection/marriage">Marriage</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <h5 class="footer-title">Collections</h5>
-                    <ul class="footer-links">
-                        <li><a href="collection/braceletes">Bracelets</a></li>
-                        <li><a href="collection/rudraksha">Rudraksha</a></li>
-                        <li><a href="collection/gemstones">Gemstones</a></li>
-                        <li><a href="collection/yantras">Yantras</a></li>
-                        <li><a href="collection/pendants">Pendants</a></li>
-                        <li><a href="collection/trees">Trees</a></li>
-                        <li><a href="collection/puja-products">Puja Products</a></li>
-                        <!--<li><a href="collection/love">Towers & Tumbles</a></li>-->
-                        <li><a href="collection/gifts">Gifts</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <h5 class="footer-title">Policies</h5>
-                    <ul class="footer-links">
-                        <li><a href="https://www.mkellybiotech.com/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="#">Return and Refund Policy</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="https://www.mkellybiotech.com/terms-and-conditions">Terms of Service</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-6 col-md-3 col-lg-2">
                     <h5 class="footer-title">Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="https://www.mkellybiotech.com/about-us">About Us</a></li>
-                        <li><a href="https://www.mkellybiotech.com/contact-us">Contact Us</a></li>
-                        <li><a href="https://www.mkellybiotech.com/our-products">Our Products</a></li>
-                        <li><a href="https://www.mkellybiotech.com/faq">FAQs</a></li>
+                        <li><a href="about-us">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="our-products">Our Products</a></li>
+                        <li><a href="faq">FAQs</a></li>
                         <!--<li><a href="#">Track Order</a></li>-->
                         <!--<li><a href="#">Blogs</a></li>-->
                         <!--<li><a href="#">Sitemap</a></li>-->
                     </ul>
                 </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-title">Mkelly Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="collection/powder">Powder</a></li>
+                        <li><a href="collection/atta">Atta</a></li>
+                        <li><a href="collection/supplements">Supplements</a></li>
+                        <li><a href="collection/wellness">Wellness</a></li>
+                        <li><a href="collection/biotech-products">Biotech Products</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-title">Collections</h5>
+                    <ul class="footer-links">
+                        <li><a href="collection/bracelet">Bracelets</a></li>
+                        <li><a href="collection/rudraksha">Rudraksha</a></li>
+                        <li><a href="collection/gemstones">Gemstones</a></li>
+                        <li><a href="collection/yantras">Yantras</a></li>
+                        <li><a href="collection/pendants">Pendants</a></li>
+                        <li><a href="collection/trees">Trees</a></li>
+                        <li><a href="collection/pooja-need">Puja Products</a></li>
+                        <li><a href="collection/combos">Combos</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-title">Policies</h5>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy">Privacy Policy</a></li>
+                        <li><a href="refund-policy">Return and Refund Policy</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="terms-and-conditions">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                
                 
             </div>
             

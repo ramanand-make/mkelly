@@ -35,7 +35,7 @@ $order_id = isset($_GET['order']) ? htmlspecialchars($_GET['order']) : '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Successful - AstroRaajeevG</title>
+    <title>Payment Successful - Mkelly Biotech</title>
     <base href="<?= BASE_URL ?>">
     
     <!-- Bootstrap 5 -->

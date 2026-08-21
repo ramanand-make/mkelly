@@ -691,66 +691,7 @@ var swiper = new Swiper(".heroSwiper", {
     }
     </script>
 
-    <!-- Editor's Pick Section -->
-    <section class="py-3" style="background: #FAFAFA;">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Editor's Pick for You</h2>
-            </div>
-            
-            <div class="row g-4">
-                <?php 
-                $editorsPick = getProducts($conn, 4); 
-                foreach ($editorsPick as $index => $prod): 
-                    $delay = ($index + 1) * 100;
-                ?>
-                <!-- Product <?= $index + 1 ?> -->
-                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="<?= $delay ?>">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <a href="product/<?= htmlspecialchars($prod['slug']) ?>">
-                                <img src="<?= get_image_url('Product-Photos/' . $prod['photo_folder'] . '/' . $prod['photo1']) ?>" alt="<?= htmlspecialchars($prod['product_name']) ?>">
-                            </a>
-                            <button class="quick-view-btn">Quick View</button>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">
-                                <a href="product/<?= htmlspecialchars($prod['slug']) ?>" class="text-decoration-none text-dark">
-                                    <?= htmlspecialchars($prod['product_name']) ?>
-                                </a>
-                            </h3>
-                            <div class="product-rating">
-                                <span class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                                <span class="rating-text">4.6 (58)</span>
-                            </div>
-                            <div class="product-price">
-                                <?php if ($prod['sale_price'] > 0): ?>
-                                    <span class="original-price">₹<?= number_format($prod['price'], 2) ?></span>
-                                    <span class="current-price">₹<?= number_format($prod['sale_price'], 2) ?></span>
-                                <?php else: ?>
-                                    <span class="current-price">₹<?= number_format($prod['price'], 2) ?></span>
-                                <?php endif; ?>
-                            </div>
-                            <button class="add-to-cart-btn" 
-                                    data-id="<?= $prod['id'] ?>" 
-                                    data-name="<?= htmlspecialchars($prod['product_name']) ?>" 
-                                    data-price="<?= $prod['sale_price'] > 0 ? $prod['sale_price'] : $prod['price'] ?>" 
-                                    data-image="<?= get_image_url('Product-Photos/' . $prod['photo_folder'] . '/' . $prod['photo1']) ?>">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
+
     
         
 
