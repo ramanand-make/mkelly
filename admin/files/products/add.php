@@ -119,13 +119,8 @@ include LAYOUT_PATH . "/head.php";
                                                 <div class="col-md-12 mb-3">
                                                     <label class="form-label">Categories (Select Multiple)</label>
                                                     <select class="form-control select2" name="categories[]" multiple="multiple">
-                                                        <?php foreach ($categories_grouped as $p_id => $p_data): ?>
-                                                            <!--<optgroup label="<?= htmlspecialchars($p_data['name']) ?>">-->
-                                                                <option value="<?= $p_id ?>"><?= htmlspecialchars($p_data['name']) ?></option>
-                                                                <?php foreach ($p_data['sub'] as $sub): ?>
-                                                                    <option value="<?= $sub['id'] ?>"><?= htmlspecialchars($sub['name']) ?></option>
-                                                                <?php endforeach; ?>
-                                                            <!--</optgroup>-->
+                                                        <?php foreach ($categories_grouped as $cat): ?>
+                                                            <option value="<?= $cat['id'] ?>"><?= htmlspecialchars($cat['name']) ?></option>
                                                         <?php endforeach; ?>
                                                     </select>
                                                 </div>
