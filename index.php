@@ -191,16 +191,7 @@ var swiper = new Swiper(".heroSwiper", {
 
 });
 </script>
-    <?php  include('includes/trustbar.php')?>₹
-
-    <section class="best-seller-section">
-        <div class="container">
-                <h2 class="best-seller-title text-center">BEST SELLER</h2>
-                <a href="collection/best-seller ">
-                    <img class="" src="assets/images/logo/Best Seller.png" style="margin-top:70px;">
-                </a>
-        </div>
-    </section>
+    
 
 
 
@@ -224,7 +215,7 @@ var swiper = new Swiper(".heroSwiper", {
                     $delay = ($index + 1) * 100;
             
                     // Product Image
-                    $image = 'Product-Photos/' . $prod['photo_folder'] . '/' . $prod['photo1'];
+                    $image = !empty($prod['photo1']) ? 'Product-Photos/' . $prod['photo_folder'] . '/' . $prod['photo1'] : '';
                     
                     // print_r($image);
             
@@ -255,7 +246,7 @@ var swiper = new Swiper(".heroSwiper", {
 
                 <a href="product/<?= htmlspecialchars($prod['slug']) ?>">
 
-                    <img src="<?= get_image_url('Product-Photos/' . $prod['photo_folder'] . '/' . $prod['photo1']) ?>"
+                    <img src="<?= get_image_url($image) ?>"
                     alt="<?= htmlspecialchars($prod['product_name']) ?>">
 
                 </a>
@@ -348,76 +339,54 @@ var swiper = new Swiper(".heroSwiper", {
 
 <!--https://canva.link/6idh92arez3643f-->
 
-    <!-- Shop By Purpose Section -->
-    <section class="py-3" style="background: #FAFAFA;">
+    <!-- Shop By Categories Section -->
+    <section class="py-5" style="background: #FAFAFA;">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Shop By Purpose</h2>
+                <h2 class="section-title">Shop by Categories</h2>
             </div>
             
-            <div class="row g-4">
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
-                    <a href="collection/love" class="text-decoration-none">
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-3 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <a href="collection/powder" class="text-decoration-none">
                         <div class="purpose-card">
-                            <img src="assets/images/shop-by-purpose/1.jpg" alt="Love">
+                            <img src="assets/images/slider/beetroot.png" alt="Powder">
                             <div class="purpose-overlay">
-                                <p class="purpose-label">Energies for deeper bonds.</p>
-                                <h3 class="purpose-title">LOVE</h3>
+                                <p class="purpose-label">Premium Natural Powders</p>
+                                <h3 class="purpose-title">POWDER</h3>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="150">
-                    <a href="collection/marrige" class="text-decoration-none">
+                <div class="col-6 col-md-3 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                    <a href="collection/atta" class="text-decoration-none">
                         <div class="purpose-card">
-                            <img src="assets/images/shop-by-purpose/2.jpg" alt="Marriage">
+                            <img src="assets/images/slider/tomato.png" alt="Atta">
                             <div class="purpose-overlay">
-                                <p class="purpose-label">Sacred Bond for Two</p>
-                                <h3 class="purpose-title">MARRIAGE</h3>
+                                <p class="purpose-label">Nutritious Blends</p>
+                                <h3 class="purpose-title">ATTA</h3>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
-                    <a href="collection/gifting" class="text-decoration-none">
+                <div class="col-6 col-md-3 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <a href="collection/supplements" class="text-decoration-none">
                         <div class="purpose-card">
-                            <img src="assets/images/shop-by-purpose/3.jpg" alt="Gifts">
+                            <img src="assets/images/slider/tea.png" alt="Supplements">
                             <div class="purpose-overlay">
-                                <p class="purpose-label">Energy You Can Gift</p>
-                                <h3 class="purpose-title">GIFTS</h3>
+                                <p class="purpose-label">Daily Health Support</p>
+                                <h3 class="purpose-title">SUPPLEMENTS</h3>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="250">
-                    <a href="collection/career" class="text-decoration-none">
+                <div class="col-6 col-md-3 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+                    <a href="collection/wellness" class="text-decoration-none">
                         <div class="purpose-card">
-                            <img src="assets/images/shop-by-purpose/4.jpg" alt="Career">
+                            <img src="assets/images/slider/As1.png" alt="Wellness">
                             <div class="purpose-overlay">
-                                <p class="purpose-label">Fuel Your Ambition</p>
-                                <h3 class="purpose-title">CAREER</h3>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
-                    <a href="collection/health" class="text-decoration-none">
-                        <div class="purpose-card">
-                            <img src="assets/images/shop-by-purpose/5.jpg" alt="Health">
-                            <div class="purpose-overlay">
-                                <p class="purpose-label">Balance Your Energy</p>
-                                <h3 class="purpose-title">HEALTH</h3>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="350">
-                    <a href="collection/money" class="text-decoration-none">
-                        <div class="purpose-card">
-                            <img src="assets/images/shop-by-purpose/6.jpg" alt="Money">
-                            <div class="purpose-overlay">
-                                <p class="purpose-label">Freedom Begins Here</p>
-                                <h3 class="purpose-title">MONEY</h3>
+                                <p class="purpose-label">Holistic Wellbeing</p>
+                                <h3 class="purpose-title">WELLNESS</h3>
                             </div>
                         </div>
                     </a>
@@ -426,184 +395,6 @@ var swiper = new Swiper(".heroSwiper", {
         </div>
     </section>
 
-    <!-- Spotlight Section -->
-    <section class="py-3" style="background: white;">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Spotlight</h2>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" >
-                    <div class="spotlight-card border-3">
-                        <img src="assets/images/spotlight/1.png" alt="Evil Eye">
-                        <div class="spotlight-content">
-                            <h3 class="spotlight-title">Evil eye</h3>
-                            <a href="collection/evil-eye" class="explore-btn">Explore</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="spotlight-card border-3">
-                        <img src="assets/images/spotlight/2.png" alt="Power of Pyrite">
-                        <div class="spotlight-content">
-                            <h3 class="spotlight-title">Power of Pyrite</h3>
-                            <a href="collection/pyrite" class="explore-btn">Explore</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="spotlight-card border-3">
-                        <img src="assets/images/spotlight/3.png" alt="Pendants">
-                        <div class="spotlight-content">
-                            <h3 class="spotlight-title">Pendants</h3>
-                            <a href="collection/pendents" class="explore-btn">Explore</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Combo Deals Section -->
-    <section class="py-3" style="background: #FFFDF2;">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Combo Deals</h2>
-            </div>
-            
-        <div class="row g-4">
-
-    <?php 
-    $conn = getSashDBConnection();
-
-    $bestSellers = getProducts($conn, 4);
-
-    foreach ($bestSellers as $index => $prod): 
-        
-        $delay = ($index + 1) * 100;
-
-        // Product Image
-        $image = !empty($prod['photo1']) 
-            ? get_image_url('Product-Photos/' . $prod['photo_folder'] . '/' . $prod['photo1']) 
-            : 'assets/images/default-product.png';
-
-        // Discount Calculation
-        $discount = 0;
-
-        if ($prod['price'] > 0 && $prod['sale_price'] > 0) {
-
-            $discount = round(
-                (($prod['price'] - $prod['sale_price']) / $prod['price']) * 100
-            );
-        }
-    ?>
-
-    <div class="col-6 col-md-4 col-lg-3" 
-         data-aos="fade-up" 
-         data-aos-delay="<?= $delay ?>">
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <?php if ($discount > 0): ?>
-                    <span class="product-badge">
-                        <?= $discount ?>% OFF
-                    </span>
-                <?php endif; ?>
-
-                <a href="product/<?= htmlspecialchars($prod['slug']) ?>">
-
-                    <img src="<?= htmlspecialchars($image) ?>" 
-                         alt="<?= htmlspecialchars($prod['product_name']) ?>">
-
-                </a>
-
-                <button class="quick-view-btn">
-                    Quick View
-                </button>
-
-            </div>
-
-            <div class="product-info">
-
-                <h3 class="product-title">
-
-                    <a href="product/<?= htmlspecialchars($prod['slug']) ?>" 
-                       class="text-decoration-none text-dark">
-
-                        <?= htmlspecialchars($prod['product_name']) ?>
-
-                    </a>
-
-                </h3>
-
-                <div class="product-rating">
-
-                    <span class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </span>
-
-                    <span class="rating-text">
-                        4.5 (47)
-                    </span>
-
-                </div>
-
-                <div class="product-price">
-
-                    <?php if ($prod['sale_price'] > 0): ?>
-
-                        <span class="original-price">
-                            ₹<?= number_format($prod['price'], 2) ?>
-                        </span>
-
-                        <span class="current-price">
-                            ₹<?= number_format($prod['sale_price'], 2) ?>
-                        </span>
-
-                    <?php else: ?>
-
-                        <span class="current-price">
-                            ₹<?= number_format($prod['price'], 2) ?>
-                        </span>
-
-                    <?php endif; ?>
-
-                </div>
-
-                <button class="add-to-cart-btn"
-                        data-id="<?= $prod['id'] ?>"
-                        data-name="<?= htmlspecialchars($prod['product_name']) ?>"
-                        data-price="<?= $prod['sale_price'] > 0 ? $prod['sale_price'] : $prod['price'] ?>"
-                        data-image="<?= htmlspecialchars($image) ?>">
-
-                    Add to Cart
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <?php endforeach; ?>
-
-</div>
-            
-            <div class="text-center mt-4">
-                <a href="collection/all" class="text-decoration-none d-inline-flex align-items-center fw-semibold btn-primary-shop" style="color: #000000;">
-                    View All Products <i class="fas fa-arrow-right ms-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Featured Product Section -->
     <!-- <section class="py-5" style="background: white;">
@@ -777,49 +568,96 @@ var swiper = new Swiper(".heroSwiper", {
     <!--            </div>-->
     <!--        </section>-->
 
-    <!-- Why Astroyogi Section -->
-    <section class="trust-section">
+    <!-- Best Features Section -->
+    <section class="py-5" style="background-color: #054B2C; color: white;">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title" style="color: white;">Why Mkelly?</h2>
-                <p class="text-white-50 mx-auto" style="max-width: 800px;">
-                    Trust is our core value at Mkelly, where authenticity is key. We process our products under scientific controls, using premium ingredients free from synthetic chemicals. With a strong legacy of quality and innovation, every product is crafted with care, integrity, and tradition.
-                </p>
+                <span class="text-white-50 text-uppercase tracking-wide fw-bold">Features</span>
+                <h2 class="display-5 fw-bold font-serif">Best Features</h2>
+                <p class="lead">Enhanced Everyday Meals</p>
             </div>
             
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 rounded h-100" style="background: rgba(255,255,255,0.05); border-top: 4px solid #C11712;">
+                        <i class="fas fa-box-open fa-3x mb-3 text-white"></i>
+                        <h4 class="fw-bold">Efficient Storage</h4>
+                        <p class="text-white-50 mb-0">Our powders extend shelf life, reduce waste, and stay lightweight and easy to store.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 rounded h-100" style="background: rgba(255,255,255,0.05); border-top: 4px solid #C11712;">
+                        <i class="fas fa-leaf fa-3x mb-3 text-white"></i>
+                        <h4 class="fw-bold">Nutrient Powders</h4>
+                        <p class="text-white-50 mb-0">Dried under control, our powders keep nutrients intact and blend easily, skipping roasting.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 rounded h-100" style="background: rgba(255,255,255,0.05); border-top: 4px solid #C11712;">
+                        <i class="fas fa-utensils fa-3x mb-3 text-white"></i>
+                        <h4 class="fw-bold">Flavor Boost</h4>
+                        <p class="text-white-50 mb-0">Add nutrients to meals; even picky eaters won't notice hidden garlic, onions, or ginger!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping & Payment Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-6 fw-bold font-serif text-primary" style="color: #054B2C;">Shipping and payment</h2>
+                <p class="text-muted fw-medium">We'll do it as fast as possible</p>
+            </div>
             <div class="row g-4">
-                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="trust-badge-item">
-                        <div class="trust-badge-icon">
-                            <i class="fas fa-check-circle"></i>
+                <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+                    <div class="d-flex p-4 shadow-sm rounded h-100 bg-light border-start border-4" style="border-color: #C11712 !important;">
+                        <div class="me-3">
+                            <i class="fas fa-shopping-basket fa-2x" style="color: #C11712;"></i>
                         </div>
-                        <h4 class="trust-badge-title">Authenticity is Our Promise</h4>
+                        <div>
+                            <h4 class="fw-bold text-dark">Order</h4>
+                            <p class="text-muted mb-0">A seamless shopping experience—browse, select, and place orders effortlessly with our easy-to-use platform.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="trust-badge-item">
-                        <div class="trust-badge-icon">
-                            <i class="fas fa-trophy"></i>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="d-flex p-4 shadow-sm rounded h-100 bg-light border-start border-4" style="border-color: #C11712 !important;">
+                        <div class="me-3">
+                            <i class="fas fa-credit-card fa-2x" style="color: #C11712;"></i>
                         </div>
-                        <h4 class="trust-badge-title">25 Years Of Legacy</h4>
+                        <div>
+                            <h4 class="fw-bold text-dark">Payment</h4>
+                            <p class="text-muted mb-0">Safe and secure payment options to ensure smooth transactions every time you shop.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="trust-badge-item">
-                        <div class="trust-badge-icon">
-                            <i class="fas fa-certificate"></i>
+                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
+                    <div class="d-flex p-4 shadow-sm rounded h-100 bg-light border-start border-4" style="border-color: #C11712 !important;">
+                        <div class="me-3">
+                            <i class="fas fa-shipping-fast fa-2x" style="color: #C11712;"></i>
                         </div>
-                        <h4 class="trust-badge-title">Lab Certified</h4>
+                        <div>
+                            <h4 class="fw-bold text-dark">Delivery</h4>
+                            <p class="text-muted mb-0">Fast, reliable, and free delivery on all orders—your favorite products brought to your doorstep quickly.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
-                    <div class="trust-badge-item">
-                        <div class="trust-badge-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h4 class="trust-badge-title">Empowered & Ethical</h4>
-                    </div>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Brands Section -->
+    <section class="py-5" style="background-color: #FAFAFA;">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-5 opacity-75">
+                <img src="assets/images/brands/1.png" alt="Partner 1" height="60" data-aos="zoom-in" data-aos-delay="100" style="object-fit: contain; filter: grayscale(100%);">
+                <img src="assets/images/brands/2.png" alt="Partner 2" height="60" data-aos="zoom-in" data-aos-delay="200" style="object-fit: contain; filter: grayscale(100%);">
+                <img src="assets/images/brands/3.png" alt="Partner 3" height="60" data-aos="zoom-in" data-aos-delay="300" style="object-fit: contain; filter: grayscale(100%);">
+                <img src="assets/images/brands/4.png" alt="Partner 4" height="60" data-aos="zoom-in" data-aos-delay="400" style="object-fit: contain; filter: grayscale(100%);">
+                <img src="assets/images/brands/5.png" alt="Partner 5" height="60" data-aos="zoom-in" data-aos-delay="500" style="object-fit: contain; filter: grayscale(100%);">
+                <img src="assets/images/brands/7.png" alt="Partner 6" height="60" data-aos="zoom-in" data-aos-delay="600" style="object-fit: contain; filter: grayscale(100%);">
             </div>
         </div>
     </section>

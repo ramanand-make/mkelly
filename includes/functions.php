@@ -261,6 +261,28 @@ function get_image_url($path) {
     // Check if it already has admin prefix
     if (strpos($cleanPath, 'admin/') === 0) return $cleanPath;
     
-    // Default to admin path
+// Default to admin path
     return 'admin/' . $cleanPath;
 }
+
+function generate_slug($string) {
+    // Replace non letter or digits by -
+    $string = preg_replace('~[^\pL\d]+~u', '-', $string);
+    // Transliterate
+    if (function_exists('iconv')) {
+        $string = iconv('utf-8', 'us-ascii//TRANSLIT', $string);
+    }
+    // Remove unwanted characters
+    $string = preg_replace('~[^-\w]+~', '', $string);
+    // Trim
+    $string = trim($string, '-');
+    // Remove duplicate -
+    $string = preg_replace('~-+~', '-', $string);
+    // Lowercase
+    $string = strtolower($string);
+    if (empty($string)) {
+        return 'n-a';
+    }
+    return $string;
+}
+

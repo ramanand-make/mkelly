@@ -196,66 +196,24 @@ include LAYOUT_PATH . "/head.php";
                                                             const objectUrl = URL.createObjectURL(file);
                                                     
                                                             img.onload = function () {
-                                                    
-                                                                // 400x400 validation
-                                                                if (this.width === 400 && this.height === 400) {
-                                                    
-                                                                    dt.items.add(file);
-                                                    
-                                                                    selectedImagesDiv.innerHTML += `
-                                                                        <div class="text-success">
-                                                                            ✔ ${file.name} selected successfully
-                                                                        </div>
-                                                                    `;
-                                                    
-                                                                } else {
-                                                    
-                                                                    errorDiv.innerHTML += `
-                                                                        <div>
-                                                                            ${file.name} - Image must be exactly 400 × 400 pixels.
-                                                                        </div>
-                                                                    `;
-                                                                }
-                                                    
+                                                                dt.items.add(file);
+                                                                selectedImagesDiv.innerHTML += `
+                                                                    <div class="text-success">
+                                                                        ✔ ${file.name} selected successfully
+                                                                    </div>
+                                                                `;
+
                                                                 processedFiles++;
-                                                    
                                                                 checkCompleted();
-                                                    
                                                                 URL.revokeObjectURL(objectUrl);
                                                             };
-                                                    
+
                                                             img.src = objectUrl;
                                                         });
-                                                    
+
                                                         function checkCompleted() {
-                                                    
-                                                            // Jab sari images process ho jaye
                                                             if (processedFiles === files.length) {
-                                                    
-                                                                // Sirf valid images select hongi
                                                                 imageInput.files = dt.files;
-                                                    
-                                                                // Minimum 5 valid images validation
-                                                                if (dt.files.length < 3) {
-                                                    
-                                                                    errorDiv.innerHTML += `
-                                                                        <div class="mt-2 fw-bold">
-                                                                            ⚠ Minimum 5 valid images are required.
-                                                                        </div>
-                                                                    `;
-                                                                }
-                                                    
-                                                                // Agar ek bhi valid image nahi hai
-                                                                if (dt.files.length === 0) {
-                                                    
-                                                                    imageInput.value = "";
-                                                    
-                                                                    errorDiv.innerHTML += `
-                                                                        <div class="mt-2 fw-bold">
-                                                                            No valid images selected.
-                                                                        </div>
-                                                                    `;
-                                                                }
                                                             }
                                                         }
                                                     });

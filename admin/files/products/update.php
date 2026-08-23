@@ -7,13 +7,7 @@ require_once APP_ROOT . "/app/auth.php";
 requireAdminLogin();
 require_once APP_ROOT . "/app/module-data.php";
 require_once APP_ROOT . "/../includes/functions.php";
-function generate_slug($string)
-{
-    $slug = strtolower(trim($string));
-    $slug = preg_replace('/[^a-z0-9-]+/', '-', $slug);
-    $slug = preg_replace('/-+/', '-', $slug);
-    return trim($slug, '-');
-}
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: " . file_url("products/list.php"));
     exit();
@@ -63,7 +57,7 @@ if (!empty($_POST['delete_images'])) {
                 }
             }
         }
-        $updates = array_map(function($c) { return "$c = NULL"; }, $selectCols);
+        $updates = array_map(function($c) { return "$c = ''"; }, $selectCols);
         $conn->query("UPDATE product SET " . implode(', ', $updates) . " WHERE id = $id");
     }
 }
@@ -79,27 +73,15 @@ if (isset($_FILES['images']) && !empty($_FILES['images']['name'][0])) {
         }
         $uploadDir = APP_ROOT . "/../Product-Photos/" . $folder . "/";
         if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0755, true);
+            mkdir($uploadDir, 0777, true);
         }
 
         $availableSlots = [];
         for ($i=1; $i<=6; $i++) {
             if (empty($row["photo$i"])) {
-                // Also check if we just deleted it in the step above
-                $isDeleted = false;
-                if (!empty($_POST['delete_images'])) {
-                    if (in_array($i, $_POST['delete_images'])) {
-                        $isDeleted = true;
-                    }
-                }
-                if ($isDeleted || empty($row["photo$i"])) {
-                    $availableSlots[] = $i;
-                }
+                $availableSlots[] = $i;
             }
         }
-        // Deduplicate slots just in case
-        $availableSlots = array_unique($availableSlots);
-        sort($availableSlots);
 
         foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
             if (empty($availableSlots)) break; // No more slots (max 6)

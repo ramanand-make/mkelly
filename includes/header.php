@@ -118,10 +118,7 @@ require_once __DIR__ . '/functions.php';
             <a href="our-products" class="nav-link-custom">Our Products</a>
             <a href="training-and-internship" class="nav-link-custom">Training & Internship</a>
             <a href="faq" class="nav-link-custom">FAQ</a>
-        
-            <a href="privacy-policy" class="nav-link-custom">
-                Policies
-            </a>
+
             
         
            

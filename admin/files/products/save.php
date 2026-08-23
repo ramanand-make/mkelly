@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 
 require_once dirname(__DIR__, 2) . "/app/init.php";
 require_once APP_ROOT . "/app/auth.php";
@@ -23,23 +26,23 @@ if (!$conn) {
    GET FORM DATA
 ========================= */
 
-$name               = $conn->real_escape_string($_POST['name']);
+$name               = $conn->real_escape_string($_POST['name'] ?? '');
 $slug               = generate_slug($name);
-$description        = $conn->real_escape_string($_POST['description']);
+$description        = $conn->real_escape_string($_POST['description'] ?? '');
 
-$gotanyquestion     = $conn->real_escape_string($_POST['gotanyquestion']);
-$returnexchange     = $conn->real_escape_string($_POST['returnexchange']);
-$disclaimer         = $conn->real_escape_string($_POST['disclaimer']);
-$review_rating      = floatval($_POST['review_rating']);
+$gotanyquestion     = $conn->real_escape_string($_POST['gotanyquestion'] ?? '');
+$returnexchange     = $conn->real_escape_string($_POST['returnexchange'] ?? '');
+$disclaimer         = $conn->real_escape_string($_POST['disclaimer'] ?? '');
+$review_rating      = floatval($_POST['review_rating'] ?? 0);
 
-$price              = floatval($_POST['price']);
+$price              = floatval($_POST['price'] ?? 0);
 
 $sale_price         = !empty($_POST['sale_price'])
                         ? floatval($_POST['sale_price'])
                         : "NULL";
 
-$stock              = intval($_POST['stock']) ?? NULL;
-$status             = intval($_POST['status']);
+$stock              = intval($_POST['stock'] ?? 0);
+$status             = intval($_POST['status'] ?? 0);
 
 $categories         = isset($_POST['categories'])
                         ? $_POST['categories']
@@ -62,7 +65,8 @@ $query = "INSERT INTO product (
             sale_price,
             product_review,
             categories,
-            is_active
+            is_active,
+            photo1, photo2, photo3, photo4, photo5, photo6, photo_folder
           ) VALUES (
             '$name',
             '$slug',
@@ -74,7 +78,8 @@ $query = "INSERT INTO product (
             $sale_price,
             $review_rating,
             '$categories_str',
-            $status
+            $status,
+            '', '', '', '', '', '', ''
           )";
 
 if ($conn->query($query)) {
@@ -94,7 +99,7 @@ if ($conn->query($query)) {
         $uploadDir = APP_ROOT . "/../Product-Photos/" . $folder . "/";
 
         if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0755, true);
+            mkdir($uploadDir, 0777, true);
         }
 
         $availableSlots = [1, 2, 3, 4, 5, 6];

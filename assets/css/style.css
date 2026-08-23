@@ -10,6 +10,11 @@ body {
     overflow-x: hidden;
 }
 
+/* Fix Bootstrap and Tailwind .collapse conflict */
+.collapse.show {
+    visibility: visible !important;
+}
+
 /* NAVIGATION */
 .nav-link-custom {
     position: relative;
