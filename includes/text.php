@@ -1,173 +1,119 @@
 <!-- =========================================
-     MONEY CONTENT SECTION
+     WELLNESS CONTENT SECTION
 ========================================= -->
 <style>
-.money-content-section {
+.wellness-content-section {
     font-family: 'Inter', sans-serif;
     color: #4b5563;
     line-height: 1.7;
 }
-.money-content-section h2, 
-.money-content-section h3, 
-.money-content-section h4 {
-    color: #000000;
+.wellness-content-section h2, 
+.wellness-content-section h3, 
+.wellness-content-section h4 {
+    color: #054B2C;
     font-weight: 600;
     margin-bottom: 1rem;
     margin-top: 2rem;
 }
-.money-content-section h2 {
+.wellness-content-section h2 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 1.5rem;
 }
-.money-content-section h3 {
+.wellness-content-section h3 {
     font-size: 1.5rem;
     border-bottom: 2px solid #f3f4f6;
     padding-bottom: 0.5rem;
 }
-.money-content-section h4 {
+.wellness-content-section h4 {
     font-size: 1.125rem;
     margin-top: 1.5rem;
 }
-.money-content-section p {
+.wellness-content-section p {
     margin-bottom: 1rem;
 }
-.money-content-section ul {
+.wellness-content-section ul {
     list-style-type: disc;
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
 }
-.money-content-section li {
+.wellness-content-section li {
     margin-bottom: 0.5rem;
 }
-.money-content-section .content-block {
+.wellness-content-section .content-block {
     margin-bottom: 3rem; /* Section gap */
 }
-.money-content-section .content-item {
+.wellness-content-section .content-item {
     margin-bottom: 2rem;
 }
-.money-content-section .tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-.money-content-section .tag-list span {
-    background: #FCE8E6;
-    color: #C11712;
-    border: 1px solid rgba(245, 197, 24, 0.2);
-    padding: 0.5rem 1.25rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    font-weight: 600;
-}
-.money-content-header {
+.wellness-content-header {
     text-align: center;
     margin-bottom: 3rem;
 }
 </style>
-<section class="money-content-section py-2">
+<section class="wellness-content-section py-2">
     <div class="container">
 
         <!-- HEADING -->
-        <div class="money-content-header">
-            <h2>Buy Money Magnet Products Online</h2>
+        <div class="wellness-content-header">
+            <h2>Buy Premium Organic Wellness Products Online</h2>
             <p>
-                Financial growth is not always consistent. There are times when income slows down,
-                expenses rise, or opportunities don’t come as expected.
+                Maintaining optimal health is a daily commitment. In today's fast-paced world, finding pure, scientifically backed nutrition can be challenging.
             </p>
         </div>
 
         <!-- CONTENT BOX -->
-        <div class="money-content-box">
+        <div class="wellness-content-box">
 
             <p>
-                In such situations, many people turn to money attraction remedies that are designed
-                to align energy with wealth, confidence, and success.
+                That is why Mkelly Biotech brings you an exclusive collection of natural organic food powders, supplements, and carefully cultivated biotech products. Our formulations are designed to seamlessly integrate into your diet and provide lasting health benefits.
             </p>
 
             <p>
-                At Mkelly, this collection focuses on bracelets made with powerful crystals
-                and Rudraksha beads, known for their connection with prosperity and abundance.
-                These are not just accessories; they are meaningful items that attract money while
-                helping you stay focused on your financial goals.
-            </p>
-
-            <p>
-                If you are wondering what to use to attract money, these bracelets are designed for
-                daily wear, combining purpose with simplicity.
+                From highly potent Cordyceps Militaris to nutritious organic atta and wellness supplements, our catalog represents the perfect fusion of nature's purity and modern biotechnology. Every product is rigorously tested to ensure you receive the highest quality nutrition.
             </p>
 
             <!-- TYPES -->
             <div class="content-block">
-                <h3>Types of Money Attraction Bracelets</h3>
+                <h3>Explore Our Premium Categories</h3>
 
                 <p>
-                    Each bracelet in this collection is created using specific stones or beads
-                    that are traditionally associated with wealth energy.
+                    Each product category at Mkelly Biotech is crafted with a specific wellness goal in mind, utilizing ethically sourced and scientifically processed ingredients.
                 </p>
 
                 <div class="content-item">
-                    <h4>Pyrite & Money Magnet Bracelets</h4>
-
+                    <h4>Organic Powders & Extracts</h4>
                     <p>
-                        Known for their strong association with financial success,
-                        pyrite-based bracelets are believed to:
+                        Our organic powders are carefully dehydrated and processed to retain maximum nutritional value. They are perfect for:
                     </p>
-
                     <ul>
-                        <li>Attract wealth opportunities</li>
-                        <li>Improve decision-making</li>
-                        <li>Strengthen confidence in business and career</li>
-                    </ul>
-
-                    <p>
-                        These are ideal for professionals, entrepreneurs,
-                        and anyone working toward financial growth.
-                    </p>
-                </div>
-
-                <div class="content-item">
-                    <h4>Green Aventurine Bracelet</h4>
-
-                    <p>
-                        Often called the “stone of opportunity,” green aventurine
-                        is used in money attraction remedies to:
-                    </p>
-
-                    <ul>
-                        <li>Support financial luck</li>
-                        <li>Encourage new opportunities</li>
-                        <li>Promote growth and expansion</li>
+                        <li>Boosting daily immunity and energy levels</li>
+                        <li>Enhancing smoothies, teas, and meals easily</li>
+                        <li>Delivering concentrated vitamins and minerals directly to your body</li>
                     </ul>
                 </div>
 
                 <div class="content-item">
-                    <h4>Tiger Eye Bracelet</h4>
-
+                    <h4>Cordyceps & Biotech Supplements</h4>
                     <p>
-                        Tiger Eye is associated with courage and clarity, helping you:
+                        Cultivated under strict laboratory conditions, our Cordyceps Militaris and advanced biotech supplements offer:
                     </p>
-
                     <ul>
-                        <li>Take better financial decisions</li>
-                        <li>Stay focused on goals</li>
-                        <li>Overcome hesitation in money matters</li>
+                        <li>Enhanced respiratory and cardiovascular support</li>
+                        <li>Natural stamina and athletic performance boosting</li>
+                        <li>Potent antioxidant and anti-inflammatory properties</li>
                     </ul>
                 </div>
 
                 <div class="content-item">
-                    <h4>Rudraksha-Based Wealth Bracelets</h4>
-
+                    <h4>Nutritious Atta & Grains</h4>
                     <p>
-                        Bracelets like 7 Mukhi Rudraksha and Dhan Yog Bracelet
-                        are rooted in spiritual practices and are believed to:
+                        Reinvent your daily meals with our fortified, organic grain blends designed for:
                     </p>
-
                     <ul>
-                        <li>Remove financial blockages</li>
-                        <li>Attract stability and abundance</li>
-                        <li>Support long-term wealth creation</li>
+                        <li>Superior digestive health and sustained energy</li>
+                        <li>Maintaining healthy blood sugar levels</li>
+                        <li>Adding robust, natural flavors to your everyday cooking</li>
                     </ul>
                 </div>
 
@@ -175,141 +121,68 @@
 
             <!-- HOW TO USE -->
             <div class="content-block">
-                <h3>How to Use Money Attraction Bracelets?</h3>
+                <h3>How to Incorporate Our Products into Your Routine</h3>
 
                 <p>
-                    To get the most out of these money attraction remedies,
-                    consistency matters.
+                    For the best results, consistency is key. Here is how you can maximize the benefits of Mkelly Biotech products:
                 </p>
 
                 <ul>
-                    <li>Wear on your left wrist for receiving energy</li>
-                    <li>Use daily, especially during work or financial planning</li>
-                    <li>Keep your intention clear (wealth, stability, growth)</li>
-                    <li>Cleanse occasionally to maintain energy balance</li>
+                    <li>Add organic powders to your morning smoothies or warm water.</li>
+                    <li>Use our premium atta as a direct replacement or blend with your regular flour.</li>
+                    <li>Take supplements as directed, ideally alongside balanced meals for optimal absorption.</li>
+                    <li>Store all products in a cool, dry place to maintain their efficacy.</li>
                 </ul>
             </div>
 
             <!-- WHY BUY -->
             <div class="content-block">
-                <h3>Why Buy Money Attraction Products from Mkelly?</h3>
+                <h3>Why Choose Mkelly Biotech?</h3>
 
                 <p>
-                    Different minerals and elements are believed to influence
-                    financial energy in unique ways:
+                    We believe in transparency, science, and sustainability. When you choose Mkelly, you are choosing:
                 </p>
 
                 <ul>
-                    <li>Made with natural, ethically sourced materials</li>
-                    <li>Designed with spiritual intention and purpose</li>
-                    <li>Suitable for daily wear</li>
-                    <li>Trusted platform for astrology-based products</li>
+                    <li>100% natural and organically sourced ingredients</li>
+                    <li>Products backed by rigorous biotechnological research</li>
+                    <li>Zero artificial preservatives or harmful chemical additives</li>
+                    <li>A brand recognized and supported by Startup Punjab and industry experts</li>
                 </ul>
-
-                <p>
-                    Each product is created to help you stay aligned with your goals
-                    while adding meaning to your daily routine.
-                </p>
             </div>
-
-            <!-- POPULAR PRODUCTS -->
-            <!--<div class="content-block">-->
-            <!--    <h3>Popular Money Attraction Bracelets</h3>-->
-
-            <!--    <p>-->
-            <!--        Our collection of money attraction bracelets is curated with a focus-->
-            <!--        on authenticity, quality, and spiritual significance.-->
-            <!--    </p>-->
-
-            <!--    <div class="tag-list">-->
-            <!--        <span>Money Magnet Bracelet</span>-->
-            <!--        <span>Dhan Yog Bracelet</span>-->
-            <!--        <span>Raw Pyrite Bracelet</span>-->
-            <!--        <span>Green Aventurine Bracelet</span>-->
-            <!--        <span>Tiger Eye Bracelet</span>-->
-            <!--        <span>7 Mukhi Rudraksha Bracelet</span>-->
-            <!--    </div>-->
-            <!--</div>-->
 
             <!-- FAQ -->
             <div class="content-block">
-                <h3>FAQs</h3>
+                <h3>Frequently Asked Questions</h3>
 
                 <div class="faq-item">
-                    <h4>1. What are money attraction products?</h4>
+                    <h4>1. Are your products 100% organic?</h4>
                     <p>
-                        They are bracelets made with crystals or rudraksha beads
-                        that are believed to support wealth, confidence,
-                        and financial growth.
+                        Yes, we strictly source and cultivate our ingredients using organic and sustainable methods, ensuring no harmful pesticides or chemicals are involved.
                     </p>
                 </div>
 
                 <div class="faq-item">
-                    <h4>2. What are the best items that attract money?</h4>
+                    <h4>2. What is Cordyceps Militaris?</h4>
                     <p>
-                        Bracelets made from pyrite, green aventurine,
-                        tiger eye, and rudraksha are commonly used
-                        as money attraction remedies.
+                        Cordyceps Militaris is a highly valued medicinal mushroom known for its remarkable ability to improve stamina, support immunity, and provide anti-aging benefits. We cultivate it using advanced biotech processes.
                     </p>
                 </div>
 
                 <div class="faq-item">
-                    <h4>3. What to use to attract money in daily life?</h4>
+                    <h4>3. How should I store the organic powders?</h4>
                     <p>
-                        Wearing a money attraction bracelet daily
-                        is one of the simplest ways to stay aligned
-                        with financial goals.
+                        Keep them in their original airtight packaging or a sealed container in a cool, dry place away from direct sunlight to preserve their nutritional integrity.
                     </p>
                 </div>
 
                 <div class="faq-item">
-                    <h4>4. Can I wear more than one bracelet?</h4>
+                    <h4>4. Are there any side effects?</h4>
                     <p>
-                        Yes, you can combine bracelets based on your intention,
-                        but keep it balanced and comfortable.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>5. How long does it take to see results?</h4>
-                    <p>
-                        Results vary depending on consistency, belief,
-                        and personal effort toward financial growth.
+                        Our products are natural food supplements and generally safe for daily consumption. However, if you have specific medical conditions or allergies, we recommend consulting a healthcare professional before use.
                     </p>
                 </div>
             </div>
-
-            <!-- OTHER CATEGORIES -->
-            <!--<div class="content-block">-->
-            <!--    <h3>Other Categories</h3>-->
-
-            <!--    <div class="tag-list">-->
-            <!--        <span>Evil Eye</span>-->
-            <!--        <span>Rudraksha</span>-->
-            <!--        <span>Karungali</span>-->
-            <!--        <span>Gemstones</span>-->
-            <!--        <span>Yantras</span>-->
-            <!--        <span>Pendants</span>-->
-            <!--        <span>Bracelets</span>-->
-            <!--        <span>Trees</span>-->
-            <!--        <span>Puja Products</span>-->
-            <!--        <span>Towers & Tumbles</span>-->
-            <!--        <span>Pyrite</span>-->
-            <!--    </div>-->
-            <!--</div>-->
-
-            <!-- SHOP BY PURPOSE -->
-            <!--<div class="content-block">-->
-            <!--    <h3>Shop By Purpose</h3>-->
-
-            <!--    <div class="tag-list">-->
-            <!--        <span>Love Remedies</span>-->
-            <!--        <span>Career Remedies</span>-->
-            <!--        <span>Health Remedies</span>-->
-            <!--        <span>Marriage Remedies</span>-->
-            <!--        <span>Gifts</span>-->
-            <!--    </div>-->
-            <!--</div>-->
 
         </div>
     </div>

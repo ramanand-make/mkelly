@@ -297,12 +297,14 @@ var swiper = new Swiper(".heroSwiper", {
 
                         <span class="current-price">
                             ₹<?= number_format($prod['sale_price'], 2) ?>
+                            <?php if(!empty($prod['unit'])): ?><span style="font-size: 0.8rem; color: #666; font-weight: normal;"> <?= htmlspecialchars($prod['unit']) ?></span><?php endif; ?>
                         </span>
 
                     <?php else: ?>
 
                         <span class="current-price">
                             ₹<?= number_format($prod['price'], 2) ?>
+                            <?php if(!empty($prod['unit'])): ?><span style="font-size: 0.8rem; color: #666; font-weight: normal;"> <?= htmlspecialchars($prod['unit']) ?></span><?php endif; ?>
                         </span>
 
                     <?php endif; ?>

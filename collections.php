@@ -77,9 +77,9 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
                     <div class="product-price">
                         <?php if ($prod['sale_price'] > 0): ?>
                             <span class="original-price">₹<?= number_format($prod['price'], 2) ?></span>
-                            <span class="current-price">₹<?= number_format($prod['sale_price'], 2) ?></span>
+                            <span class="current-price">₹<?= number_format($prod['sale_price'], 2) ?><?php if(!empty($prod['unit'])): ?><span style="font-size: 0.8rem; color: #666; font-weight: normal;"> <?= htmlspecialchars($prod['unit']) ?></span><?php endif; ?></span>
                         <?php else: ?>
-                            <span class="current-price">₹<?= number_format($prod['price'], 2) ?></span>
+                            <span class="current-price">₹<?= number_format($prod['price'], 2) ?><?php if(!empty($prod['unit'])): ?><span style="font-size: 0.8rem; color: #666; font-weight: normal;"> <?= htmlspecialchars($prod['unit']) ?></span><?php endif; ?></span>
                         <?php endif; ?>
                     </div>
                     <button type="button" class="add-to-cart-btn"
@@ -248,9 +248,9 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
                                 <div class="product-price">
                                     <?php if ($prod['sale_price'] > 0): ?>
                                         <span class="original-price">₹<?= number_format($prod['price'], 2) ?></span>
-                                        <span class="current-price">₹<?= number_format($prod['sale_price'], 2) ?></span>
+                                        <span class="current-price">₹<?= number_format($prod['sale_price'], 2) ?><?php if(!empty($prod['unit'])): ?><span style="font-size: 0.8rem; color: #666; font-weight: normal;"> <?= htmlspecialchars($prod['unit']) ?></span><?php endif; ?></span>
                                     <?php else: ?>
-                                        <span class="current-price">₹<?= number_format($prod['price'], 2) ?></span>
+                                        <span class="current-price">₹<?= number_format($prod['price'], 2) ?><?php if(!empty($prod['unit'])): ?><span style="font-size: 0.8rem; color: #666; font-weight: normal;"> <?= htmlspecialchars($prod['unit']) ?></span><?php endif; ?></span>
                                     <?php endif; ?>
                                 </div>
                                 <button type="button" class="add-to-cart-btn"

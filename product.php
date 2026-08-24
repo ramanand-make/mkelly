@@ -158,7 +158,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                 <!-- Pricing -->
                 <div class="space-y-1">
                     <div class="flex items-center gap-4">
-                        <span class="text-xl font-black text-gray-900" id="display-sale-price">₹<?= number_format($product['sale_price'] > 0 ? $product['sale_price'] : $product['price'], 2); ?></span>
+                        <span class="text-xl font-black text-gray-900" id="display-sale-price">₹<?= number_format($product['sale_price'] > 0 ? $product['sale_price'] : $product['price'], 2); ?><?php if(!empty($product['unit'])): ?><span class="text-sm font-normal text-gray-500"> <?= htmlspecialchars($product['unit']) ?></span><?php endif; ?></span>
                         <?php if ($product['sale_price'] > 0): ?>
                         <span class="text-xl text-gray-400 line-through font-medium" id="display-original-price">₹<?= number_format($product['price'], 2); ?></span>
                         <?php endif; ?>
@@ -460,9 +460,9 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                         <div class="product-price">
                             <?php if ($prod['sale_price'] > 0): ?>
                                 <span class="original-price">₹<?= number_format($prod['price'], 2) ?></span>
-                                <span class="current-price">₹<?= number_format($prod['sale_price'], 2) ?></span>
+                                <span class="current-price">₹<?= number_format($prod['sale_price'], 2) ?><?php if(!empty($prod['unit'])): ?><span style="font-size: 0.8rem; color: #666; font-weight: normal;"> <?= htmlspecialchars($prod['unit']) ?></span><?php endif; ?></span>
                             <?php else: ?>
-                                <span class="current-price">₹<?= number_format($prod['price'], 2) ?></span>
+                                <span class="current-price">₹<?= number_format($prod['price'], 2) ?><?php if(!empty($prod['unit'])): ?><span style="font-size: 0.8rem; color: #666; font-weight: normal;"> <?= htmlspecialchars($prod['unit']) ?></span><?php endif; ?></span>
                             <?php endif; ?>
                         </div>
                         <button class="add-to-cart-btn"

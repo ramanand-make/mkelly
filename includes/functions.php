@@ -138,6 +138,7 @@ function getProducts($conn, $limit = 8, $category_id = null, $offset = 0, $sort 
                 p.description,
                 p.categories,
                 p.photo_folder,
+                p.unit,
 
                 p.photo1,
                 p.photo2,
