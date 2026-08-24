@@ -126,20 +126,24 @@ include LAYOUT_PATH . "/head.php";
                                                     <label class="form-label">Product Name</label>
                                                     <input type="text" class="form-control" name="name" value="<?= htmlspecialchars($product['name']) ?>" required>
                                                 </div>
-                                                <div class="col-md-4 mb-3">
+                                                <div class="col-md-3 mb-3">
                                                     <label class="form-label">Price (₹)</label>
                                                     <input type="number" id="price" step="0.01" class="form-control" name="price" value="<?= $product['price'] ?>" required>
                                                 </div>
-                                                <div class="col-md-4 mb-3">
+                                                <div class="col-md-3 mb-3">
                                                     <label class="form-label">Sale Price (₹)</label>
                                                     <input type="number" id="sale_price" step="0.01" class="form-control" name="sale_price" value="<?= $product['sale_price'] ?>">
                                                 </div>
-                                                 <div class="col-md-4 mb-3">
+                                                 <div class="col-md-3 mb-3">
                                                     <label class="form-label">Discount</label>
                                                     <input type="text"
                                                            class="form-control"
                                                            id="discount"
                                                            readonly>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="form-label">Unit (e.g., /kg, /80g)</label>
+                                                    <input type="text" class="form-control" name="unit" value="<?= htmlspecialchars($product['unit'] ?? '') ?>" placeholder="e.g. /kg, /80g" maxlength="50">
                                                 </div>
                                                 <script>
                                                     function calculateDiscount() {

@@ -40,6 +40,7 @@ $price              = floatval($_POST['price'] ?? 0);
 $sale_price         = !empty($_POST['sale_price'])
                         ? floatval($_POST['sale_price'])
                         : "NULL";
+$unit               = $conn->real_escape_string($_POST['unit'] ?? '');
 
 $stock              = intval($_POST['stock'] ?? 0);
 $status             = intval($_POST['status'] ?? 0);
@@ -63,6 +64,7 @@ $query = "INSERT INTO product (
             disclaimer,
             price,
             sale_price,
+            unit,
             product_review,
             categories,
             is_active,
@@ -76,6 +78,7 @@ $query = "INSERT INTO product (
             '$disclaimer',
             $price,
             $sale_price,
+            '$unit',
             $review_rating,
             '$categories_str',
             $status,

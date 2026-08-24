@@ -118,9 +118,9 @@ include LAYOUT_PATH . "/head.php";
                                                         <td><?= htmlspecialchars($product['category_names'] ?: 'Uncategorized') ?></td>
                                                         <td>
                                                             <?php if ($product['sale_price']): ?>
-                                                                <del>₹<?= $product['price'] ?></del> <span class="text-success">₹<?= $product['sale_price'] ?></span>
+                                                                <del>₹<?= $product['price'] ?></del> <span class="text-success">₹<?= $product['sale_price'] ?></span> <?= !empty($product['unit']) ? htmlspecialchars($product['unit']) : '' ?>
                                                             <?php else: ?>
-                                                                ₹<?= $product['price'] ?>
+                                                                ₹<?= $product['price'] ?> <?= !empty($product['unit']) ? htmlspecialchars($product['unit']) : '' ?>
                                                             <?php endif; ?>
                                                         </td>
                                                         <td>
