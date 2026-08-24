@@ -835,28 +835,33 @@ body {
 
 /* Footer */
 .main-footer {
-    background: #000000;
+    background: linear-gradient(135deg, #022c19 0%, #054B2C 100%);
     color: white;
-    padding: 60px 0 30px;
+    padding: 70px 0 30px;
+    position: relative;
+    border-top: 5px solid #C11712;
 }
 
 .footer-logo {
     max-width: 150px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    filter: brightness(0) invert(1);
 }
 
 .footer-description {
-    color: #999;
-    font-size: 14px;
-    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    line-height: 1.8;
     margin-bottom: 24px;
 }
 
 .footer-title {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .footer-links {
@@ -866,49 +871,64 @@ body {
 }
 
 .footer-links li {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .footer-links a {
-    color: #999;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .footer-links a:hover {
-    color: #054B2C;
+    color: #C11712;
+    transform: translateX(5px);
+    text-shadow: 0 0 8px rgba(193, 23, 18, 0.3);
 }
 
 .footer-social {
     display: flex;
-    gap: 12px;
+    gap: 15px;
 }
 
 .footer-social a {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-social a:hover {
-    background: #054B2C;
-    color: #000000;
+    background: #C11712;
+    color: #ffffff;
+    transform: translateY(-3px);
+    border-color: #C11712;
 }
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 50px;
+    padding-top: 25px;
     text-align: center;
-    color: #666;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
+}
+.footer-bottom a {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-bottom a:hover {
+    color: #C11712 !important;
 }
 
 /* WhatsApp Button */

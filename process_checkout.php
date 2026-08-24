@@ -6,8 +6,8 @@ header('Content-Type: application/json');
 
 // --- RAZORPAY CREDENTIALS ---
 // User: Put your real Razorpay Key ID and Key Secret here
-$RAZORPAY_KEY = "rzp_live_Rt2YjMUoP3Qt11";
-$RAZORPAY_SECRET = "J6nniCqLCPy8Rm6iOr5K9GTo";
+$RAZORPAY_KEY = "rzp_live_2eyU9c73EPESGc";
+$RAZORPAY_SECRET = "IthUYAuWaSseKWbVBTGp1gCc";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'] ?? '';

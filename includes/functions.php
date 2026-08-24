@@ -57,7 +57,7 @@ function getNavbarMenu($conn) {
     }
     return $menu;
 }
-function getProduct($conn, $limit = 4, $category_id = null)
+function getProduct($conn, $limit = 12, $category_id = null)
 {
     $sql = "SELECT 
     p.*,
@@ -86,7 +86,7 @@ WHERE p.is_active = 1";
     }
 
     // Latest products
-    $sql .= " ORDER BY p.id DESC LIMIT ?";
+    $sql .= " ORDER BY p.id ASC LIMIT ?";
 
     $types .= 'i';
 

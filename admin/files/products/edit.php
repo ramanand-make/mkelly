@@ -47,21 +47,10 @@ if ($conn) {
         exit();
     }
 
-    // Fetch all categories for grouping
-    $result = $conn->query("SELECT * FROM categories WHERE status = 1 ORDER BY name ASC");
+    $result = $conn->query("SELECT id, name FROM categories WHERE status = 1 ORDER BY name ASC");
     if ($result) {
-        $all_cats = [];
         while ($row = $result->fetch_assoc()) {
-            $all_cats[] = $row;
-        }
-        foreach ($all_cats as $cat) {
-            
-                $categories_grouped[$cat['id']] = ['name' => $cat['name'], 'sub' => []];
-        
-                
-                    // $categories_grouped[$cat['parent_id']]['sub'][] = $cat;
-                
-            
+            $categories_grouped[] = $row;
         }
     }
     $conn->close();
@@ -142,8 +131,18 @@ include LAYOUT_PATH . "/head.php";
                                                            readonly>
                                                 </div>
                                                 <div class="col-md-3 mb-3">
-                                                    <label class="form-label">Unit (e.g., /kg, /80g)</label>
-                                                    <input type="text" class="form-control" name="unit" value="<?= htmlspecialchars($product['unit'] ?? '') ?>" placeholder="e.g. /kg, /80g" maxlength="50">
+                                                    <label class="form-label">Unit</label>
+                                                    <select class="form-control" name="unit">
+                                                        <option value="">Select Unit</option>
+                                                        <option value="/kg" <?= ($product['unit'] == '/kg') ? 'selected' : '' ?>>/kg</option>
+                                                        <option value="/500g" <?= ($product['unit'] == '/500g') ? 'selected' : '' ?>>/500g</option>
+                                                        <option value="/250g" <?= ($product['unit'] == '/250g') ? 'selected' : '' ?>>/250g</option>
+                                                        <option value="/100g" <?= ($product['unit'] == '/100g') ? 'selected' : '' ?>>/100g</option>
+                                                        <option value="/80g" <?= ($product['unit'] == '/80g') ? 'selected' : '' ?>>/80g</option>
+                                                        <option value="/50g" <?= ($product['unit'] == '/50g') ? 'selected' : '' ?>>/50g</option>
+                                                        <option value="/pack" <?= ($product['unit'] == '/pack') ? 'selected' : '' ?>>/pack</option>
+                                                        <option value="/piece" <?= ($product['unit'] == '/piece') ? 'selected' : '' ?>>/piece</option>
+                                                    </select>
                                                 </div>
                                                 <script>
                                                     function calculateDiscount() {
@@ -212,10 +211,16 @@ include LAYOUT_PATH . "/head.php";
                                                     </div>
                                                     <?php endif; ?>
                                                 </div>
-                                                <!-- Got Any Questions -->
+                                                <!-- Benefit -->
                                                 <div class="col-md-12 mb-3">
-                                                    <label class="form-label">Got Any Questions</label>
-                                                    <textarea class="form-control editor" name="gotanyquestion"><?= htmlspecialchars($product['how_to_use'] ?? '') ?></textarea>
+                                                    <label class="form-label">Benefit</label>
+                                                    <textarea class="form-control editor" name="benefit"><?= htmlspecialchars($product['benefit'] ?? '') ?></textarea>
+                                                </div>
+                                                
+                                                <!-- How To Use -->
+                                                <div class="col-md-12 mb-3">
+                                                    <label class="form-label">How to Use</label>
+                                                    <textarea class="form-control editor" name="how_to_use"><?= htmlspecialchars($product['how_to_use'] ?? '') ?></textarea>
                                                 </div>
                                                 
                                                 <!-- Return & Exchange -->

@@ -4,6 +4,7 @@ require_once 'includes/functions.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Mkelly Biotech</title>
@@ -231,6 +232,83 @@ require_once 'includes/functions.php';
             .content-block h2 { font-size: 2.2rem; }
             .hero-section { padding: 90px 0 60px; }
         }
+        /* Hallmarks Redesign */
+        .hallmark-item {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .hallmark-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+        .hallmark-img {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+        .hallmark-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .hallmark-item:hover .hallmark-img img {
+            transform: scale(1.1);
+        }
+        .hallmark-img::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5) 100%);
+        }
+        .hallmark-icon {
+            position: absolute;
+            top: 210px; /* Overlap image and content */
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 10px 20px rgba(193, 23, 18, 0.4);
+            border: 4px solid #fff;
+            transition: transform 0.4s ease;
+            z-index: 2;
+        }
+        .hallmark-item:hover .hallmark-icon {
+            transform: scale(1.15) rotate(15deg);
+        }
+        .hallmark-content {
+            padding: 45px 30px 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+        .hallmark-content h4 {
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+        .hallmark-content p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body class="bg-background">
@@ -295,24 +373,45 @@ require_once 'includes/functions.php';
         
         <div class="row g-4 justify-content-center">
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="glass-card text-center h-100">
-                    <img src="assets/images/content/720x540/ach1.jpg" alt="Innovation">
-                    <h4 class="fw-bold mb-3">Innovation</h4>
-                    <p class="opacity-75 mb-0 lh-lg">Pioneering research to discover cutting-edge molecules and technologies that address critical unmet medical needs, driving a future of real impact and progress.</p>
+                <div class="hallmark-item">
+                    <div class="hallmark-img">
+                        <img src="assets/images/content/720x540/ach1.jpg" alt="Innovation">
+                    </div>
+                    <div class="hallmark-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="hallmark-content">
+                        <h4>Innovation</h4>
+                        <p>Pioneering research to discover cutting-edge molecules and technologies that address critical unmet medical needs, driving a future of real impact and progress.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="glass-card text-center h-100">
-                    <img src="assets/images/content/720x540/ach2.jpg" alt="Microversity">
-                    <h4 class="fw-bold mb-3">Microversity</h4>
-                    <p class="opacity-75 mb-0 lh-lg">Offering specialized training in Microbiology and related sciences, renowned for innovative ideas and excellence, with prestigious honors from Startup Punjab and CGC Landran.</p>
+                <div class="hallmark-item">
+                    <div class="hallmark-img">
+                        <img src="assets/images/content/720x540/ach2.jpg" alt="Microversity">
+                    </div>
+                    <div class="hallmark-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="hallmark-content">
+                        <h4>Microversity</h4>
+                        <p>Offering specialized training in Microbiology and related sciences, renowned for innovative ideas and excellence, with prestigious honors from Startup Punjab and CGC Landran.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="glass-card text-center h-100">
-                    <img src="assets/images/content/720x540/ach3.jpg" alt="Recognition">
-                    <h4 class="fw-bold mb-3">Recognition</h4>
-                    <p class="opacity-75 mb-0 lh-lg">Celebrated among the top three startups at TiECON Chandigarh and successfully securing key funding, including ₹5 lacs from the RKEY Scheme and ₹3 lacs from Startup Punjab.</p>
+                <div class="hallmark-item">
+                    <div class="hallmark-img">
+                        <img src="assets/images/content/720x540/ach3.jpg" alt="Recognition">
+                    </div>
+                    <div class="hallmark-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="hallmark-content">
+                        <h4>Recognition</h4>
+                        <p>Celebrated among the top three startups at TiECON Chandigarh and successfully securing key funding, including ₹5 lacs from the RKEY Scheme and ₹3 lacs from Startup Punjab.</p>
+                    </div>
                 </div>
             </div>
         </div>

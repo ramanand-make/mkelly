@@ -20,6 +20,7 @@ if (!empty($pageFavicon)) {
 <html lang="en" dir="ltr">
 
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <!-- META DATA -->
     <meta charset="UTF-8">
@@ -39,16 +40,8 @@ if (!empty($pageFavicon)) {
         ) ?>">
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="<?= htmlspecialchars(
-        $faviconUrl,
-        ENT_QUOTES,
-        "UTF-8",
-    ) ?>">
-    <link rel="shortcut icon" type="image/png" href="<?= htmlspecialchars(
-        $faviconUrl,
-        ENT_QUOTES,
-        "UTF-8",
-    ) ?>">
+    ">
+    ">
 
     <!-- TITLE -->
     <title><?= htmlspecialchars(

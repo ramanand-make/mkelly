@@ -47,6 +47,7 @@ $keyId = 'rzp_live_2eyU9c73EPESGc';
         "currency": "INR",
         "name": "MKelly Biotech",
         "description": "Order #<?= $order_id ?>",
+        "image": "../assets/images/logo/logo.png",
         "order_id": "<?= $razorpayOrderId ?>",
         "handler": function (response) {
             // On payment success, submit data to verification page

@@ -95,8 +95,18 @@ include LAYOUT_PATH . "/head.php";
                                                            readonly>
                                                 </div>
                                                 <div class="col-md-3 mb-3">
-                                                    <label class="form-label">Unit (e.g., /kg, /80g)</label>
-                                                    <input type="text" class="form-control" name="unit" placeholder="e.g. /kg, /80g" maxlength="50">
+                                                    <label class="form-label">Unit</label>
+                                                    <select class="form-control" name="unit">
+                                                        <option value="">Select Unit</option>
+                                                        <option value="/kg">/kg</option>
+                                                        <option value="/500g">/500g</option>
+                                                        <option value="/250g">/250g</option>
+                                                        <option value="/100g">/100g</option>
+                                                        <option value="/80g">/80g</option>
+                                                        <option value="/50g">/50g</option>
+                                                        <option value="/pack">/pack</option>
+                                                        <option value="/piece">/piece</option>
+                                                    </select>
                                                 </div>
                                                 <script>
                                                     function calculateDiscount() {

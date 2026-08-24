@@ -8,6 +8,7 @@ ini_set('display_startup_errors', 1);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mkelly – Buy Natural Organic Food Powders & Wellness Products</title>
@@ -15,7 +16,7 @@ ini_set('display_startup_errors', 1);
     <meta name="description" content="Shop natural, scientifically dried food powders, organic tea, beetroot and tomato powders at Mkelly. Premium quality and legacy of wellness.">
     <!-- SWIPER CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<link rel="icon" type="image/x-icon" href="assets/images/logo/logo.png">
+
 
 
 <!-- SWIPER JS -->
@@ -329,7 +330,7 @@ var swiper = new Swiper(".heroSwiper", {
 </div>
             
             <div class="text-center mt-4">
-                <a href="collection/all" class="text-decoration-none d-inline-flex align-items-center fw-semibold btn-primary-shop" style="color: #000000;">
+                <a href="collection/all" class="text-decoration-none d-inline-flex align-items-center fw-semibold btn-primary-shop" style="color: ;">
                     View All Products <i class="fas fa-arrow-right ms-2"></i>
                 </a>
             </div>
@@ -569,34 +570,109 @@ var swiper = new Swiper(".heroSwiper", {
     <!--        </section>-->
 
     <!-- Best Features Section -->
-    <section class="py-5" style="background-color: #054B2C; color: white;">
-        <div class="container">
+    <style>
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 1.25rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(193, 23, 18, 0.15) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(193, 23, 18, 0.4);
+        }
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+        .feature-icon-wrapper {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 1.75rem;
+            background: linear-gradient(135deg, #C11712, #ff4d4d);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(193, 23, 18, 0.5);
+            transition: all 0.4s ease;
+        }
+        .feature-card:hover .feature-icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 30px rgba(193, 23, 18, 0.7);
+        }
+        .feature-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        .feature-desc {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        .decorative-blob {
+            position: absolute;
+            background: rgba(193, 23, 18, 0.25);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+    <section class="py-5 position-relative" style="background-color: #054B2C; color: white; overflow: hidden;">
+        <!-- Decorative elements -->
+        <div class="decorative-blob" style="top: -10%; left: -5%; width: 300px; height: 300px;"></div>
+        <div class="decorative-blob" style="bottom: -10%; right: -5%; width: 300px; height: 300px;"></div>
+        
+        <div class="container position-relative" style="z-index: 2;">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="text-white-50 text-uppercase tracking-wide fw-bold">Features</span>
-                <h2 class="display-5 fw-bold font-serif">Best Features</h2>
-                <p class="lead">Enhanced Everyday Meals</p>
+                <span class="badge rounded-pill text-uppercase px-3 py-2 mb-3 shadow-sm" style="background: rgba(193, 23, 18, 0.2); border: 1px solid rgba(193, 23, 18, 0.3); color: #ffcccc; letter-spacing: 1.5px;">Why Choose Us</span>
+                <h2 class="display-5 fw-bold font-serif mb-3">Best Features</h2>
+                <p class="lead text-white-50 mx-auto" style="max-width: 600px;">Experience the difference with our enhanced everyday meals, crafted to deliver uncompromising nutrition, flavor, and convenience.</p>
             </div>
             
             <div class="row g-4 justify-content-center text-center">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-4 rounded h-100" style="background: rgba(255,255,255,0.05); border-top: 4px solid #C11712;">
-                        <i class="fas fa-box-open fa-3x mb-3 text-white"></i>
-                        <h4 class="fw-bold">Efficient Storage</h4>
-                        <p class="text-white-50 mb-0">Our powders extend shelf life, reduce waste, and stay lightweight and easy to store.</p>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card p-5 h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-box-open fa-2x text-white"></i>
+                        </div>
+                        <h4 class="feature-title">Efficient Storage</h4>
+                        <p class="feature-desc mb-0">Our powders dramatically extend shelf life, reduce waste, and remain incredibly lightweight and easy to store anywhere.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-4 rounded h-100" style="background: rgba(255,255,255,0.05); border-top: 4px solid #C11712;">
-                        <i class="fas fa-leaf fa-3x mb-3 text-white"></i>
-                        <h4 class="fw-bold">Nutrient Powders</h4>
-                        <p class="text-white-50 mb-0">Dried under control, our powders keep nutrients intact and blend easily, skipping roasting.</p>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card p-5 h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-leaf fa-2x text-white"></i>
+                        </div>
+                        <h4 class="feature-title">Nutrient Powders</h4>
+                        <p class="feature-desc mb-0">Dried carefully under controlled conditions, our powders keep nutrients intact and blend easily without roasting.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="p-4 rounded h-100" style="background: rgba(255,255,255,0.05); border-top: 4px solid #C11712;">
-                        <i class="fas fa-utensils fa-3x mb-3 text-white"></i>
-                        <h4 class="fw-bold">Flavor Boost</h4>
-                        <p class="text-white-50 mb-0">Add nutrients to meals; even picky eaters won't notice hidden garlic, onions, or ginger!</p>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card p-5 h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-utensils fa-2x text-white"></i>
+                        </div>
+                        <h4 class="feature-title">Flavor Boost</h4>
+                        <p class="feature-desc mb-0">Add hidden nutrients to meals effortlessly; even the pickiest eaters won't notice the extra garlic, onions, or ginger!</p>
                     </div>
                 </div>
             </div>
@@ -604,44 +680,98 @@ var swiper = new Swiper(".heroSwiper", {
     </section>
 
     <!-- Shipping & Payment Section -->
+    <style>
+        .service-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, #054B2C, #C11712);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: rgba(193, 23, 18, 0.1);
+            color: #C11712;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: all 0.4s ease;
+        }
+        .service-card:hover .service-icon {
+            background: #C11712;
+            color: #ffffff;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(193, 23, 18, 0.3);
+        }
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #054B2C;
+            margin-bottom: 1rem;
+        }
+        .service-desc {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
     <section class="py-5 bg-white">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-6 fw-bold font-serif text-primary" style="color: #054B2C;">Shipping and payment</h2>
-                <p class="text-muted fw-medium">We'll do it as fast as possible</p>
+                <span class="badge rounded-pill text-uppercase px-3 py-2 mb-3" style="background: rgba(5, 75, 44, 0.1); color: #054B2C; letter-spacing: 1px;">How It Works</span>
+                <h2 class="display-6 fw-bold font-serif mb-2" style="color: #054B2C;">Shipping & Payment</h2>
+                <p class="text-muted fw-medium">Seamless experience from order to doorstep</p>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="d-flex p-4 shadow-sm rounded h-100 bg-light border-start border-4" style="border-color: #C11712 !important;">
-                        <div class="me-3">
-                            <i class="fas fa-shopping-basket fa-2x" style="color: #C11712;"></i>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-basket"></i>
                         </div>
-                        <div>
-                            <h4 class="fw-bold text-dark">Order</h4>
-                            <p class="text-muted mb-0">A seamless shopping experience—browse, select, and place orders effortlessly with our easy-to-use platform.</p>
-                        </div>
+                        <h4 class="service-title">1. Easy Ordering</h4>
+                        <p class="service-desc mb-0">A seamless shopping experience—browse, select, and place orders effortlessly with our intuitive platform.</p>
                     </div>
                 </div>
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="d-flex p-4 shadow-sm rounded h-100 bg-light border-start border-4" style="border-color: #C11712 !important;">
-                        <div class="me-3">
-                            <i class="fas fa-credit-card fa-2x" style="color: #C11712;"></i>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div>
-                            <h4 class="fw-bold text-dark">Payment</h4>
-                            <p class="text-muted mb-0">Safe and secure payment options to ensure smooth transactions every time you shop.</p>
-                        </div>
+                        <h4 class="service-title">2. Secure Payment</h4>
+                        <p class="service-desc mb-0">Safe and secure payment options with 100% encryption to ensure smooth transactions every time.</p>
                     </div>
                 </div>
-                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
-                    <div class="d-flex p-4 shadow-sm rounded h-100 bg-light border-start border-4" style="border-color: #C11712 !important;">
-                        <div class="me-3">
-                            <i class="fas fa-shipping-fast fa-2x" style="color: #C11712;"></i>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-shipping-fast"></i>
                         </div>
-                        <div>
-                            <h4 class="fw-bold text-dark">Delivery</h4>
-                            <p class="text-muted mb-0">Fast, reliable, and free delivery on all orders—your favorite products brought to your doorstep quickly.</p>
-                        </div>
+                        <h4 class="service-title">3. Fast Delivery</h4>
+                        <p class="service-desc mb-0">Reliable and swift delivery on all orders—bringing your favorite nutritional products to your doorstep.</p>
                     </div>
                 </div>
             </div>
@@ -652,12 +782,12 @@ var swiper = new Swiper(".heroSwiper", {
     <section class="py-5" style="background-color: #FAFAFA;">
         <div class="container">
             <div class="d-flex flex-wrap justify-content-center align-items-center gap-5 opacity-75">
-                <img src="assets/images/brands/1.png" alt="Partner 1" height="60" data-aos="zoom-in" data-aos-delay="100" style="object-fit: contain; filter: grayscale(100%);">
-                <img src="assets/images/brands/2.png" alt="Partner 2" height="60" data-aos="zoom-in" data-aos-delay="200" style="object-fit: contain; filter: grayscale(100%);">
-                <img src="assets/images/brands/3.png" alt="Partner 3" height="60" data-aos="zoom-in" data-aos-delay="300" style="object-fit: contain; filter: grayscale(100%);">
-                <img src="assets/images/brands/4.png" alt="Partner 4" height="60" data-aos="zoom-in" data-aos-delay="400" style="object-fit: contain; filter: grayscale(100%);">
-                <img src="assets/images/brands/5.png" alt="Partner 5" height="60" data-aos="zoom-in" data-aos-delay="500" style="object-fit: contain; filter: grayscale(100%);">
-                <img src="assets/images/brands/7.png" alt="Partner 6" height="60" data-aos="zoom-in" data-aos-delay="600" style="object-fit: contain; filter: grayscale(100%);">
+                <img src="assets/images/brands/1.png" alt="Partner 1" height="60" data-aos="zoom-in" data-aos-delay="100" style="object-fit: contain;">
+                <img src="assets/images/brands/2.png" alt="Partner 2" height="60" data-aos="zoom-in" data-aos-delay="200" style="object-fit: contain;">
+                <img src="assets/images/brands/3.png" alt="Partner 3" height="60" data-aos="zoom-in" data-aos-delay="300" style="object-fit: contain;">
+                <img src="assets/images/brands/4.png" alt="Partner 4" height="60" data-aos="zoom-in" data-aos-delay="400" style="object-fit: contain;">
+                <img src="assets/images/brands/5.png" alt="Partner 5" height="60" data-aos="zoom-in" data-aos-delay="500" style="object-fit: contain;">
+                <img src="assets/images/brands/7.png" alt="Partner 6" height="60" data-aos="zoom-in" data-aos-delay="600" style="object-fit: contain;">
             </div>
         </div>
     </section>

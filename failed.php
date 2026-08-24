@@ -10,6 +10,7 @@ $error_msg = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : 'An unkn
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Failed - Mkelly</title>

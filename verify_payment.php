@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $message = "
             <html>
             <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
             <title>New Order Received</title>
             </head>
             <body>

@@ -33,6 +33,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $product['name']; ?> – Mkelly</title>
@@ -40,7 +41,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
     
       <!-- SWIPER CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<link rel="icon" type="image/x-icon" href="assets/images/logo/logo-new (1).png">
+
 
 <!-- SWIPER JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -382,12 +383,12 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
     </div>
 </main>
 
-<section class="py-2" style="background: white;">
+<!-- <section class="py-2" style="background: white;">
     <div class="container">
         <img src="assets/images/expert.jpg" style="border-radius:10px;"/>
     </div>
     
-</section>
+</section> -->
 
 <!-- Similar Products Section -->
 <section class="pb-2 mt-4" style="background: white;">

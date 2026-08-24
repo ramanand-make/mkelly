@@ -1,7 +1,7 @@
 <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-4 justify-content-between">
                 <div class="col-lg-4">
                     <!-- <div class="footer-social mb-4"> -->
                         <!-- <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -36,19 +36,7 @@
                         <li><a href="collection/biotech-products">Biotech Products</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <h5 class="footer-title">Collections</h5>
-                    <ul class="footer-links">
-                        <li><a href="collection/bracelet">Bracelets</a></li>
-                        <li><a href="collection/rudraksha">Rudraksha</a></li>
-                        <li><a href="collection/gemstones">Gemstones</a></li>
-                        <li><a href="collection/yantras">Yantras</a></li>
-                        <li><a href="collection/pendants">Pendants</a></li>
-                        <li><a href="collection/trees">Trees</a></li>
-                        <li><a href="collection/pooja-need">Puja Products</a></li>
-                        <li><a href="collection/combos">Combos</a></li>
-                    </ul>
-                </div>
+                
                 <div class="col-6 col-md-3 col-lg-2">
                     <h5 class="footer-title">Policies</h5>
                     <ul class="footer-links">

@@ -488,8 +488,9 @@ document.addEventListener('DOMContentLoaded', function() {
                    
                      "amount": Math.round(data.amount * 100),
                     "currency": "INR",
-                    "name": "Mkelly",
+                    "name": "Mkelly Biotech",
                     "description": "Order Payment",
+                    "image": "assets/images/logo/logo.png",
                     "handler": function (response){
                         // Verify Payment
                         verifyPayment(response.razorpay_payment_id, response.razorpay_order_id, response.razorpay_signature, data.db_order_id);

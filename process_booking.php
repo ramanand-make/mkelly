@@ -17,8 +17,10 @@ error_reporting(0);
 $isPost = $_SERVER['REQUEST_METHOD'] === 'POST';
 $data = json_decode(file_get_contents('php://input'), true) ?: $_POST;
 
-$RAZORPAY_KEY = "rzp_live_Rt2YjMUoP3Qt11";
-$RAZORPAY_SECRET = "J6nniCqLCPy8Rm6iOr5K9GTo";
+$RAZORPAY_KEY = "rzp_live_2eyU9c73EPESGc";
+$RAZORPAY_SECRET = "IthUYAuWaSseKWbVBTGp1gCc";
+
+
 
 
 
@@ -245,6 +247,7 @@ function sendBookingEmail($booking)
     <!DOCTYPE html>
     <html>
     <head>
+    <link rel='icon' type='image/png' href='assets/images/favicon.png'>
         <meta charset='UTF-8'>
     </head>
     <body style='font-family:\"Inter\",sans-serif;background:#f4f6f4;color:#333333;margin:0;padding:20px;'>

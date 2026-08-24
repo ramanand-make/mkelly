@@ -23,7 +23,8 @@ $id = intval($_POST['id']);
 $name = $conn->real_escape_string($_POST['name']);
 $slug = generate_slug($name);
 $description = $conn->real_escape_string($_POST['description'] ?? '');
-$gotanyquestion = $conn->real_escape_string($_POST['gotanyquestion'] ?? '');
+$benefit = $conn->real_escape_string($_POST['benefit'] ?? '');
+$how_to_use = $conn->real_escape_string($_POST['how_to_use'] ?? '');
 $returnexchange = $conn->real_escape_string($_POST['returnexchange'] ?? '');
 $disclaimer = $conn->real_escape_string($_POST['disclaimer'] ?? '');
 
@@ -35,6 +36,9 @@ $unit = $conn->real_escape_string($_POST['unit'] ?? '');
 $status = intval($_POST['status']);
 $ratti = intval($_POST['ratti_status']);
 $categories = isset($_POST['categories']) ? $_POST['categories'] : [];
+if (!is_array($categories)) {
+    $categories = !empty($categories) ? [$categories] : [];
+}
 
 // Process deleting selected images
 if (!empty($_POST['delete_images'])) {
@@ -110,7 +114,8 @@ $query = "UPDATE product SET
           product_name = '$name', 
           slug = '$slug', 
           description = '$description', 
-          how_to_use = '$gotanyquestion',
+          benefit = '$benefit',
+          how_to_use = '$how_to_use',
           return_exchange = '$returnexchange',
           disclaimer = '$disclaimer',
           price = $price, 

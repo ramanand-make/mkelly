@@ -877,6 +877,7 @@ async function rgSubmit() {
         currency: "INR",
         name: "Mkelly Biotech",
         description: "Booking Consultation",
+        image: "assets/images/logo/logo.png",
         order_id: data.order_id,
         handler: async function(response) {
             document.getElementById('rg-loader').classList.add('show');

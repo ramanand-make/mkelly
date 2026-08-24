@@ -30,7 +30,8 @@ $name               = $conn->real_escape_string($_POST['name'] ?? '');
 $slug               = generate_slug($name);
 $description        = $conn->real_escape_string($_POST['description'] ?? '');
 
-$gotanyquestion     = $conn->real_escape_string($_POST['gotanyquestion'] ?? '');
+$benefit            = $conn->real_escape_string($_POST['benefit'] ?? '');
+$how_to_use         = $conn->real_escape_string($_POST['how_to_use'] ?? '');
 $returnexchange     = $conn->real_escape_string($_POST['returnexchange'] ?? '');
 $disclaimer         = $conn->real_escape_string($_POST['disclaimer'] ?? '');
 $review_rating      = floatval($_POST['review_rating'] ?? 0);
@@ -48,6 +49,9 @@ $status             = intval($_POST['status'] ?? 0);
 $categories         = isset($_POST['categories'])
                         ? $_POST['categories']
                         : [];
+if (!is_array($categories)) {
+    $categories = !empty($categories) ? [$categories] : [];
+}
 
 /* =========================
    INSERT PRODUCT
@@ -59,6 +63,7 @@ $query = "INSERT INTO product (
             product_name,
             slug,
             description,
+            benefit,
             how_to_use,
             return_exchange,
             disclaimer,
@@ -73,7 +78,8 @@ $query = "INSERT INTO product (
             '$name',
             '$slug',
             '$description',
-            '$gotanyquestion',
+            '$benefit',
+            '$how_to_use',
             '$returnexchange',
             '$disclaimer',
             $price,

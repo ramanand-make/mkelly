@@ -4,6 +4,7 @@ require_once 'includes/functions.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Mkelly Biotech</title>
@@ -36,10 +37,15 @@ require_once 'includes/functions.php';
 
 <?php include('includes/header.php') ?>
 
-<section class="bg-primary text-white py-5" style="background-color: #054B2C;">
-    <div class="container text-center py-5">
+<section class="position-relative overflow-hidden text-white py-5" style="background: linear-gradient(135deg, #054B2C 0%, #0a7344 100%);">
+    <!-- Decorative background elements -->
+    <div class="position-absolute" style="top: -20%; right: -5%; width: 300px; height: 300px; background: rgba(255,255,255,0.05); border-radius: 50%; filter: blur(40px);"></div>
+    <div class="position-absolute" style="bottom: -20%; left: -5%; width: 250px; height: 250px; background: rgba(193,23,18,0.15); border-radius: 50%; filter: blur(40px);"></div>
+    
+    <div class="container text-center py-5 position-relative" style="z-index: 2;">
+        <span class="badge rounded-pill text-uppercase px-3 py-2 mb-3" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); letter-spacing: 1.5px;">Legal</span>
         <h1 class="display-4 fw-bold font-serif mb-3">Privacy Policy</h1>
-        <p class="lead mb-0">Your privacy is critically important to us.</p>
+        <p class="lead mx-auto mb-0 text-white-50" style="max-width: 600px;">Your privacy is critically important to us.</p>
     </div>
 </section>
 

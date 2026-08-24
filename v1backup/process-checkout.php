@@ -211,6 +211,7 @@ if ($paymentType === 'online payment') {
         "currency": "INR",
         "name": "MKelly Biotech",
         "description": "Order #<?= intval($order_id) ?>",
+        "image": "assets/images/logo/logo.png",
         "order_id": "<?= htmlspecialchars($rzp_order_id) ?>",
         "handler": function (response) {
             // On success, submit form to verification script

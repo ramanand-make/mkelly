@@ -77,6 +77,7 @@ if ($order_id > 0) {
                         <!DOCTYPE html>
                         <html>
                         <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
                         <meta charset="UTF-8">
                         <title>Order Confirmation</title>
                         </head>
