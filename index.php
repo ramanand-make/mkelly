@@ -72,26 +72,43 @@ ini_set('display_startup_errors', 1);
     <div class="swiper heroSwiper">
         <div class="swiper-wrapper">
 
-            <!-- Slide 1: Tomato -->
+            <!-- Slide 1: Moringa Super Greens -->
             <div class="swiper-slide">
-                <div class="mkelly-hero-slide bg-orange">
-                    <div class="mkelly-backdrop-text">Mkelly</div>
-                    <img src="assets/images/slider/shpinat-2.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-1">
-                    <img src="assets/images/slider/shpinat-1.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-2">
-                    <img src="assets/images/slider/shpinat-3.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-3">
-                    <div class="container">
+                <div class="mkelly-hero-slide theme-emerald">
+                    <div class="mkelly-hero-ambient-glow glow-emerald"></div>
+                    <div class="mkelly-backdrop-text">ORGANIC</div>
+                    <img src="assets/images/slider/shpinat-2.png" alt="Botanical Leaf" class="mkelly-floating-leaf leaf-1">
+                    <img src="assets/images/slider/shpinat-1.png" alt="Botanical Leaf" class="mkelly-floating-leaf leaf-2">
+                    <img src="assets/images/slider/shpinat-3.png" alt="Botanical Leaf" class="mkelly-floating-leaf leaf-3">
+                    <div class="container position-relative" style="z-index: 5;">
                         <div class="row align-items-center">
                             <div class="col-lg-6" data-aos="fade-right">
                                 <div class="mkelly-hero-content">
-                                    <span class="mkelly-hero-subtitle">CRAFTED TO PERFECTION</span>
-                                    <h2 class="mkelly-hero-title">Flavor Meets <span class="accent-crimson">Nutrition</span></h2>
-                                    <p class="mkelly-hero-desc">Enhance meals with nutrient-rich powders, blending taste and health effortlessly.</p>
-                                    <a href="collection/best-seller" class="mkelly-hero-btn">Shop Now</a>
+                                    <span class="mkelly-hero-badge"><i class="fas fa-leaf"></i> 100% Pure Organic Superfood</span>
+                                    <h2 class="mkelly-hero-title">Nutrient-Rich <span class="text-gradient-emerald">Green Powders</span></h2>
+                                    <p class="mkelly-hero-desc">Enhance your meals with scientifically dried organic powders. Packed with vitamins, zero heat degradation, and 100% nutrient lock.</p>
+                                    
+                                    <div class="mkelly-hero-pills">
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> Zero Preservatives</span>
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> Lab Certified Purity</span>
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> Bio-Available</span>
+                                    </div>
+
+                                    <div class="mkelly-hero-btn-group">
+                                        <a href="collection/powder" class="mkelly-hero-btn btn-emerald">Explore Powders <i class="fas fa-arrow-right ms-2"></i></a>
+                                        <a href="collection/best-seller" class="mkelly-hero-btn-outline">Best Sellers</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 text-center" data-aos="fade-left">
                                 <div class="mkelly-hero-img-wrapper">
-                                    <img src="assets/images/slider/tomato.png" alt="Tomato Powder" class="mkelly-hero-main-img">
+                                    <div class="hero-image-card">
+                                        <img src="assets/images/slider/hero_moringa.png" alt="Organic Moringa Green Powder" class="mkelly-hero-main-img">
+                                        <div class="hero-floating-badge badge-emerald">
+                                            <i class="fas fa-award"></i>
+                                            <span>Premium Grade</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -99,23 +116,42 @@ ini_set('display_startup_errors', 1);
                 </div>
             </div>
 
-            <!-- Slide 2: Tea -->
+            <!-- Slide 2: Cordyceps Herbal Tea -->
             <div class="swiper-slide">
-                <div class="mkelly-hero-slide bg-green">
-                    <div class="mkelly-backdrop-text">Health</div>
-                    <div class="container">
+                <div class="mkelly-hero-slide theme-amber">
+                    <div class="mkelly-hero-ambient-glow glow-amber"></div>
+                    <div class="mkelly-backdrop-text">IMMUNITY</div>
+                    <img src="assets/images/slider/shpinat-1.png" alt="Botanical Leaf" class="mkelly-floating-leaf leaf-1">
+                    <img src="assets/images/slider/shpinat-3.png" alt="Botanical Leaf" class="mkelly-floating-leaf leaf-2">
+                    <div class="container position-relative" style="z-index: 5;">
                         <div class="row align-items-center">
                             <div class="col-lg-6" data-aos="fade-right">
                                 <div class="mkelly-hero-content">
-                                    <span class="mkelly-hero-subtitle">IMMUNITY BOOST</span>
-                                    <h2 class="mkelly-hero-title">Health <span class="accent-crimson">Every Day</span></h2>
-                                    <p class="mkelly-hero-desc">Boost your energy and immunity with our Cordyceps tea.</p>
-                                    <a href="collection/best-seller" class="mkelly-hero-btn">Shop Now</a>
+                                    <span class="mkelly-hero-badge"><i class="fas fa-mug-hot"></i> Ancient Vitality Elixir</span>
+                                    <h2 class="mkelly-hero-title">Elevate Immunity with <span class="text-gradient-amber">Cordyceps Tea</span></h2>
+                                    <p class="mkelly-hero-desc">Revitalize daily energy and cellular immunity with our wild Cordyceps mushroom blend. Smooth, aromatic, and rich in natural bio-actives.</p>
+                                    
+                                    <div class="mkelly-hero-pills">
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> Stamina & Energy</span>
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> Wild Mushroom Blend</span>
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> 100% Herbal</span>
+                                    </div>
+
+                                    <div class="mkelly-hero-btn-group">
+                                        <a href="collection/supplements" class="mkelly-hero-btn btn-amber">Shop Cordyceps <i class="fas fa-arrow-right ms-2"></i></a>
+                                        <a href="collection/all" class="mkelly-hero-btn-outline">Browse All</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 text-center" data-aos="fade-left">
                                 <div class="mkelly-hero-img-wrapper">
-                                    <img src="assets/images/slider/tea.png" alt="Cordyceps Tea" class="mkelly-hero-main-img">
+                                    <div class="hero-image-card">
+                                        <img src="assets/images/slider/hero_tea.png" alt="Cordyceps Herbal Immunity Tea" class="mkelly-hero-main-img">
+                                        <div class="hero-floating-badge badge-amber">
+                                            <i class="fas fa-fire"></i>
+                                            <span>Top Seller</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -123,25 +159,85 @@ ini_set('display_startup_errors', 1);
                 </div>
             </div>
 
-            <!-- Slide 3: Beetroot -->
+            <!-- Slide 3: Beetroot Ruby Superfood -->
             <div class="swiper-slide">
-                <div class="mkelly-hero-slide bg-bittersweet">
-                    <div class="mkelly-backdrop-text">Enjoy</div>
-                    <img src="assets/images/slider/shpinat-3.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-1">
-                    <img src="assets/images/slider/shpinat-2.png" alt="Spinach Leaf" class="mkelly-floating-leaf leaf-2">
-                    <div class="container">
+                <div class="mkelly-hero-slide theme-ruby">
+                    <div class="mkelly-hero-ambient-glow glow-ruby"></div>
+                    <div class="mkelly-backdrop-text">NOURISH</div>
+                    <img src="assets/images/slider/shpinat-3.png" alt="Botanical Leaf" class="mkelly-floating-leaf leaf-1">
+                    <img src="assets/images/slider/shpinat-2.png" alt="Botanical Leaf" class="mkelly-floating-leaf leaf-2">
+                    <div class="container position-relative" style="z-index: 5;">
                         <div class="row align-items-center">
                             <div class="col-lg-6" data-aos="fade-right">
                                 <div class="mkelly-hero-content">
-                                    <span class="mkelly-hero-subtitle">FRESHNESS REDEFINED</span>
-                                    <h2 class="mkelly-hero-title">Organic Food <span class="accent-orange">Every Day</span></h2>
-                                    <p class="mkelly-hero-desc">Scientifically dried products ensure less waste and more value.</p>
-                                    <a href="collection/best-seller" class="mkelly-hero-btn">Shop Now</a>
+                                    <span class="mkelly-hero-badge"><i class="fas fa-heartbeat"></i> Circulation & Endurance</span>
+                                    <h2 class="mkelly-hero-title">Supercharge Vitality with <span class="text-gradient-ruby">Ruby Beetroot</span></h2>
+                                    <p class="mkelly-hero-desc">Naturally rich in dietary nitrates and antioxidants to power blood flow, physical stamina, and glowing daily energy.</p>
+                                    
+                                    <div class="mkelly-hero-pills">
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> High Nitrates</span>
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> Heart Health</span>
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> Pure Beetroot</span>
+                                    </div>
+
+                                    <div class="mkelly-hero-btn-group">
+                                        <a href="collection/powder" class="mkelly-hero-btn btn-ruby">Shop Beetroot <i class="fas fa-arrow-right ms-2"></i></a>
+                                        <a href="collection/best-seller" class="mkelly-hero-btn-outline">Best Sellers</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 text-center" data-aos="fade-left">
                                 <div class="mkelly-hero-img-wrapper">
-                                    <img src="assets/images/slider/beetroot.png" alt="Beetroot Powder" class="mkelly-hero-main-img">
+                                    <div class="hero-image-card">
+                                        <img src="assets/images/slider/hero_beetroot.png" alt="Organic Beetroot Powder" class="mkelly-hero-main-img">
+                                        <div class="hero-floating-badge badge-ruby">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span>Antioxidant Rich</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Golden Turmeric Power -->
+            <div class="swiper-slide">
+                <div class="mkelly-hero-slide theme-saffron">
+                    <div class="mkelly-hero-ambient-glow glow-saffron"></div>
+                    <div class="mkelly-backdrop-text">WELLNESS</div>
+                    <img src="assets/images/slider/shpinat-2.png" alt="Botanical Leaf" class="mkelly-floating-leaf leaf-1">
+                    <img src="assets/images/slider/shpinat-1.png" alt="Botanical Leaf" class="mkelly-floating-leaf leaf-3">
+                    <div class="container position-relative" style="z-index: 5;">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6" data-aos="fade-right">
+                                <div class="mkelly-hero-content">
+                                    <span class="mkelly-hero-badge"><i class="fas fa-seedling"></i> Scientific Biotech Extracts</span>
+                                    <h2 class="mkelly-hero-title">Golden Saffron & <span class="text-gradient-saffron">Turmeric Power</span></h2>
+                                    <p class="mkelly-hero-desc">High-potency organic curcumin and botanical spice extracts. Engineered for anti-inflammatory support and holistic vitality.</p>
+                                    
+                                    <div class="mkelly-hero-pills">
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> Pure Curcumin</span>
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> Joint & Immune</span>
+                                        <span class="pill-tag"><i class="fas fa-check-circle"></i> 100% Organic</span>
+                                    </div>
+
+                                    <div class="mkelly-hero-btn-group">
+                                        <a href="collection/wellness" class="mkelly-hero-btn btn-saffron">Explore Wellness <i class="fas fa-arrow-right ms-2"></i></a>
+                                        <a href="collection/all" class="mkelly-hero-btn-outline">Shop Store</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center" data-aos="fade-left">
+                                <div class="mkelly-hero-img-wrapper">
+                                    <div class="hero-image-card">
+                                        <img src="assets/images/slider/hero_turmeric.png" alt="Golden Turmeric Powder" class="mkelly-hero-main-img">
+                                        <div class="hero-floating-badge badge-saffron">
+                                            <i class="fas fa-certificate"></i>
+                                            <span>Bioactive Formula</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -164,32 +260,24 @@ ini_set('display_startup_errors', 1);
 <script>
     /* HERO SWIPER */
 var swiper = new Swiper(".heroSwiper", {
-
     loop: true,
-
     speed: 1200,
-
     autoplay: {
-        delay: 4000,
+        delay: 4500,
         disableOnInteraction: false,
     },
-
     effect: "fade",
-
     fadeEffect: {
         crossFade: true,
     },
-
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
-
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-
 });
 </script>
     
