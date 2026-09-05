@@ -49,20 +49,6 @@ require_once 'includes/functions.php';
             background-color: var(--bg-light);
             color: #333;
         }
-        .hero-section {
-            background: linear-gradient(135deg, rgba(5, 75, 44, 0.95) 0%, rgba(5, 75, 44, 0.8) 100%), url('assets/images/content/720x540/leaf.png') center/cover;
-            padding: 120px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 50px;
-            background: var(--bg-light);
-            clip-path: polygon(0 100%, 100% 100%, 100% 0);
-        }
         
         .image-card {
             border-radius: 20px;
@@ -230,7 +216,6 @@ require_once 'includes/functions.php';
         @media (max-width: 991px) {
             .founder-img-wrapper { height: 300px; }
             .content-block h2 { font-size: 2.2rem; }
-            .hero-section { padding: 90px 0 60px; }
         }
         /* Hallmarks Redesign */
         .hallmark-item {
@@ -316,12 +301,15 @@ require_once 'includes/functions.php';
 <?php include('includes/header.php') ?>
 
 <!-- Page Header -->
-<section class="hero-section text-white text-center">
-    <div class="container position-relative z-10">
-        <h1 class="display-3 fw-bold font-serif mb-4" data-aos="zoom-in">About Us</h1>
-        <p class="lead fw-light mx-auto" data-aos="fade-up" data-aos-delay="100" style="max-width: 600px; font-size: 1.25rem;">
-            Where Innovation Meets Excellence In Biotechnology. We are committed to revolutionizing organic food and sustainable health.
-        </p>
+<section class="position-relative overflow-hidden text-white py-5" style="background: linear-gradient(135deg, #054B2C 0%, #0a7344 100%);">
+    <!-- Decorative background elements -->
+    <div class="position-absolute" style="top: -20%; right: -5%; width: 300px; height: 300px; background: rgba(255,255,255,0.05); border-radius: 50%; filter: blur(40px);"></div>
+    <div class="position-absolute" style="bottom: -20%; left: -5%; width: 250px; height: 250px; background: rgba(193,23,18,0.15); border-radius: 50%; filter: blur(40px);"></div>
+    
+    <div class="container text-center py-5 position-relative" style="z-index: 2;">
+        <span class="badge rounded-pill text-uppercase px-3 py-2 mb-3" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); letter-spacing: 1.5px;">About Us</span>
+        <h1 class="display-3 fw-bold font-serif mb-4" data-aos="fade-up">About Us</h1>
+        <p class="lead mx-auto mb-0 text-white-50" data-aos="fade-up" data-aos-delay="100" style="max-width: 600px;">Where Innovation Meets Excellence In Biotechnology. We are committed to revolutionizing organic food and sustainable health.</p>
     </div>
 </section>
 

@@ -4,8 +4,11 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 require_once __DIR__ . '/../admin/config/database.php';
 
-$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http");
-$host = $_SERVER['HTTP_HOST'];
+$isHttps = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] === 'on' || $_SERVER['HTTPS'] == 1))
+    || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
+    || (isset($_SERVER['HTTP_FRONT_END_HTTPS']) && $_SERVER['HTTP_FRONT_END_HTTPS'] === 'on');
+$protocol = $isHttps ? "https" : "http";
+$httpHost = $_SERVER['HTTP_HOST'] ?? 'localhost';
 
 $docRoot = isset($_SERVER['DOCUMENT_ROOT']) ? realpath($_SERVER['DOCUMENT_ROOT']) : '';
 $projectRoot = realpath(dirname(__DIR__));
@@ -23,9 +26,9 @@ if ($docRoot && $projectRoot) {
     if ($relativePath !== '/') {
         $relativePath = $relativePath . '/';
     }
-    $base_url = $protocol . "://" . $host . $relativePath;
+    $base_url = $protocol . "://" . $httpHost . $relativePath;
 } else {
-    $base_url = $protocol . "://" . $host . "/";
+    $base_url = $protocol . "://" . $httpHost . "/";
 }
 
 if (!defined('BASE_URL')) {
@@ -34,6 +37,9 @@ if (!defined('BASE_URL')) {
 
 
 function getNavbarMenu($conn) {
+    if (!$conn instanceof \mysqli) {
+        return [];
+    }
     $sql = "SELECT * FROM navbar_menu WHERE status = 1 AND parent_id = 0 ORDER BY order_no ASC";
     $result = $conn->query($sql);
     $menu = [];
@@ -43,14 +49,16 @@ function getNavbarMenu($conn) {
             // Check if it has sub-items in navbar_menu
             $sqlSub = "SELECT * FROM navbar_menu WHERE parent_id = ? AND status = 1 ORDER BY order_no ASC";
             $stmt = $conn->prepare($sqlSub);
-            $stmt->bind_param("i", $row['id']);
-            $stmt->execute();
-            $subResult = $stmt->get_result();
-            if ($subResult->num_rows > 0) {
-                $menuItem['children'] = $subResult->fetch_all(MYSQLI_ASSOC);
-            } else {
-                // If no sub-items in navbar_menu, check categories
-                $menuItem['children'] = getCategoriesByName($conn, $row['title']);
+            if ($stmt) {
+                $stmt->bind_param("i", $row['id']);
+                $stmt->execute();
+                $subResult = $stmt->get_result();
+                if ($subResult->num_rows > 0) {
+                    $menuItem['children'] = $subResult->fetch_all(MYSQLI_ASSOC);
+                } else {
+                    // If no sub-items in navbar_menu, check categories
+                    $menuItem['children'] = getCategoriesByName($conn, $row['title']);
+                }
             }
             $menu[] = $menuItem;
         }
@@ -59,6 +67,9 @@ function getNavbarMenu($conn) {
 }
 function getProduct($conn, $limit = 12, $category_id = null)
 {
+    if (!$conn instanceof \mysqli) {
+        return [];
+    }
     $sql = "SELECT 
     p.*,
 
@@ -109,8 +120,14 @@ function getCategoriesByName($conn, $name) {
 }
 
 function getCategoryBySlug($conn, $slug) {
+    if (!$conn instanceof \mysqli) {
+        return null;
+    }
     $sql = "SELECT * FROM categories WHERE slug = ? AND status = 1 LIMIT 1";
     $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        return null;
+    }
     $stmt->bind_param("s", $slug);
     $stmt->execute();
     return $stmt->get_result()->fetch_assoc();
@@ -126,9 +143,11 @@ function getCategoryTreeIds($conn, $category_id) {
 /**
  * Active products; when $category_id is set, matches product_category (many-to-many).
  */
- $conn = getSashDBConnection();
 function getProducts($conn, $limit = 8, $category_id = null, $offset = 0, $sort = '')
 {
+    if (!$conn instanceof \mysqli) {
+        return [];
+    }
     $sql = "SELECT 
                 p.id,
                 p.product_name,
@@ -198,7 +217,7 @@ function getProducts($conn, $limit = 8, $category_id = null, $offset = 0, $sort 
     $stmt = $conn->prepare($sql);
 
     if (!$stmt) {
-        die($conn->error);
+        return [];
     }
 
     // Bind only category params
@@ -210,14 +229,20 @@ function getProducts($conn, $limit = 8, $category_id = null, $offset = 0, $sort 
 
     $result = $stmt->get_result();
 
-    return $result->fetch_all(MYSQLI_ASSOC);
+    return $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
 }
 function tableExists($conn, $tableName) {
+    if (!$conn instanceof \mysqli) {
+        return false;
+    }
     $tableName = $conn->real_escape_string($tableName);
     $result = $conn->query("SHOW TABLES LIKE '$tableName'");
     return $result && $result->num_rows > 0;
 }
 function getProductBySlug($conn, $slug) {
+    if (!$conn instanceof \mysqli) {
+        return null;
+    }
     $sql = "SELECT p.*, 
             (
                 SELECT c.name
@@ -230,20 +255,31 @@ function getProductBySlug($conn, $slug) {
             WHERE p.slug = ? AND p.is_active = 1 LIMIT 1";
     
     $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        return null;
+    }
     $stmt->bind_param("s", $slug);
     $stmt->execute();
     return $stmt->get_result()->fetch_assoc();
 }
 
 function getProductImages($conn, $product_id) {
+    if (!$conn instanceof \mysqli) {
+        return [];
+    }
     $sql = "SELECT image FROM product_images WHERE product_id = ? ORDER BY id ASC";
     $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        return [];
+    }
     $stmt->bind_param("i", $product_id);
     $stmt->execute();
     $result = $stmt->get_result();
     $images = [];
-    while ($row = $result->fetch_assoc()) {
-        $images[] = $row['image'];
+    if ($result) {
+        while ($row = $result->fetch_assoc()) {
+            $images[] = $row['image'];
+        }
     }
     return $images;
 }
