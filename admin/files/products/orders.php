@@ -95,8 +95,6 @@ include LAYOUT_PATH . "/head.php";
                                                         <th>Location</th>
                                                         <th>Products & Images</th>
                                                         <th>Total Amount</th>
-                                                        <th>Ratti</th>
-                                                        
                                                         <th>Payment Status</th>
                                                         <th>Order Status</th>
                                                         <th>Date</th>
@@ -104,7 +102,7 @@ include LAYOUT_PATH . "/head.php";
                                                 </thead>
                                                 <tbody>
                                                     <?php if (empty($orders)): ?>
-                                                        <tr><td colspan="13" class="text-center">No orders found yet.</td></tr>
+                                                        <tr><td colspan="11" class="text-center">No orders found yet.</td></tr>
                                                     <?php else: ?>
                                                         <?php foreach ($orders as $order): ?>
                                                         <tr>
@@ -147,8 +145,6 @@ include LAYOUT_PATH . "/head.php";
                                                                 <?php endif; ?>
                                                             </td>
                                                             <td class="align-middle fw-bold">₹<?= number_format((float)($order['total_amount'] ?? 0), 2) ?></td>
-                                                            <td class="align-middle"><?= htmlspecialchars($order['no_of_ratti'] ?? '0') ?></td>
-                                                           
                                                             <td class="align-middle">
                                                                 <?php
                                                                     $pStatus = strtolower($order['payment_status'] ?? 'pending');

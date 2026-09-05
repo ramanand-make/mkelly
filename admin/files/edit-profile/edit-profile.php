@@ -384,10 +384,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (save_site_settings($newSettings)) {
                 $siteMetaSaved = true;
                 $siteSettings = load_site_settings();
-                // Also refresh favicon.png so browsers pick up the new logo.
+                // Only fallback copy if favicon.png does not already exist
                 $sourceLogo = ASSETS_PATH . "/" . ltrim($logoPath, "/");
                 $faviconDest = ASSETS_PATH . "/favicon.png";
-                if (is_file($sourceLogo)) {
+                if (!is_file($faviconDest) && is_file($sourceLogo)) {
                     @copy($sourceLogo, $faviconDest);
                 }
             } else {

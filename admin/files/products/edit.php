@@ -241,7 +241,7 @@ include LAYOUT_PATH . "/head.php";
                                                 <!--    <label class="form-label">Stock</label>-->
                                                 <!--    <input type="number" class="form-control" name="stock" value="<?= $product['stock'] ?>">-->
                                                 <!--</div>-->
-                                                <div class="col-md-4 mb-3">
+                                                <div class="col-md-6 mb-3">
                                                     <label class="form-label">Product Review Rating</label>
                                                 
                                                     <select class="form-control" name="review_rating" required>
@@ -263,18 +263,11 @@ include LAYOUT_PATH . "/head.php";
                                                         </option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-4 mb-3">
+                                                <div class="col-md-6 mb-3">
                                                     <label class="form-label">Status</label>
                                                     <select class="form-control" name="status">
                                                         <option value="1" <?= $product['status'] ? 'selected' : '' ?>>Active</option>
                                                         <option value="0" <?= !$product['status'] ? 'selected' : '' ?>>Inactive</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-4 mb-3">
-                                                    <label class="form-label">Ratti Status</label>
-                                                    <select class="form-control" name="ratti_status">
-                                                        <option value="1" <?= (isset($product['is_ratti']) && $product['is_ratti'] == '1') ? 'selected' : '' ?>>Active</option>
-                                                        <option value="0" <?= (!isset($product['is_ratti']) || $product['is_ratti'] == '0') ? 'selected' : '' ?>>Inactive</option>
                                                     </select>
                                                 </div>
                                             </div>

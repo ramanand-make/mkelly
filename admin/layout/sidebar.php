@@ -78,14 +78,7 @@
                     </a>
                 </li>
                 
-                <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="<?= file_url(
-                        "astrobooking/list",
-                    ) ?>">
-                        <i class="side-menu__icon fe fe-calendar"></i>
-                        <span class="side-menu__label">Bookings</span>
-                    </a>
-                </li>
+               
 
                 <!--<li class="sub-category">
                     <h3>User Management</h3>

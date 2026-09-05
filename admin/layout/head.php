@@ -8,6 +8,12 @@ $siteMetaKeywords =
     $siteSettings["keywords"] ??
     "admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.";
 $faviconPath = ASSETS_PATH . "/favicon.png";
+if (!is_file($faviconPath)) {
+    $rootFavicon = dirname(APP_ROOT) . "/assets/images/favicon.png";
+    if (is_file($rootFavicon)) {
+        @copy($rootFavicon, $faviconPath);
+    }
+}
 $faviconUrl = is_file($faviconPath)
     ? asset_url("favicon.png") . "?v=" . (filemtime($faviconPath) ?: time())
     : site_logo_href(true, $siteSettings);
@@ -20,7 +26,6 @@ if (!empty($pageFavicon)) {
 <html lang="en" dir="ltr">
 
 <head>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <!-- META DATA -->
     <meta charset="UTF-8">
@@ -40,8 +45,16 @@ if (!empty($pageFavicon)) {
         ) ?>">
 
     <!-- FAVICON -->
-    ">
-    ">
+    <link rel="icon" type="image/png" href="<?= htmlspecialchars(
+        $faviconUrl,
+        ENT_QUOTES,
+        "UTF-8",
+    ) ?>">
+    <link rel="shortcut icon" type="image/png" href="<?= htmlspecialchars(
+        $faviconUrl,
+        ENT_QUOTES,
+        "UTF-8",
+    ) ?>">
 
     <!-- TITLE -->
     <title><?= htmlspecialchars(

@@ -169,18 +169,6 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
                     <p class="text-sm text-gray-500 font-medium">M.R.P. (Incl. of all taxes). Free Delivery on all online payments</p>
                 </div>
 
-                <?php if (isset($product['is_ratti']) && $product['is_ratti'] == '1'): ?>
-                <div class="pt-2 pb-2">
-                    <h3 class="text-lg font-medium text-gray-700 mb-3">Ratti</h3>
-                    <div class="flex flex-wrap gap-2" id="ratti-selector">
-                        <?php for($i=3; $i<=12; $i++): ?>
-                            <button class="ratti-btn w-12 h-12 flex items-center justify-center rounded-lg border-2 <?= $i == 3 ? 'bg-gray-700 text-white border-gray-700 active-ratti' : 'bg-white text-gray-700 border-gray-200 hover:border-gray-300' ?> font-bold transition-all" data-ratti="<?= $i ?>">
-                                <?= $i ?>
-                            </button>
-                        <?php endfor; ?>
-                    </div>
-                </div>
-                <?php endif; ?>
 
                 <!-- Best Offers Section -->
                 <!-- <div class="bg-white rounded-2xl p-6 border-2 border-gray-50 shadow-sm space-y-5">
@@ -642,45 +630,7 @@ if ($product['price'] > 0 && $product['sale_price'] > 0) {
         input.value = val;
     }
 
-    // Ratti selector logic
-    const basePrice = <?= $product['sale_price'] > 0 ? $product['sale_price'] : $product['price'] ?>;
-    const baseOriginalPrice = <?= $product['price'] ?>;
 
-    document.querySelectorAll('.ratti-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Update active state
-            document.querySelectorAll('.ratti-btn').forEach(b => {
-                b.classList.remove('bg-gray-700', 'text-white', 'border-gray-700', 'active-ratti');
-                b.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
-            });
-            this.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
-            this.classList.add('bg-gray-700', 'text-white', 'border-gray-700', 'active-ratti');
-
-            const currentRatti = parseInt(this.dataset.ratti);
-            
-            // Calculate new prices
-            const newSalePrice = (basePrice / 3) * currentRatti;
-            const newOriginalPrice = (baseOriginalPrice / 3) * currentRatti;
-
-            // Update UI
-            document.getElementById('display-sale-price').innerText = '₹' + newSalePrice.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-            if (document.getElementById('display-original-price')) {
-                document.getElementById('display-original-price').innerText = '₹' + newOriginalPrice.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-            }
-
-            // Update buttons
-            const addToCartBtn = document.querySelector('.add-to-cart-btn[data-id="<?= $product['id'] ?>"]');
-            if (addToCartBtn) {
-                addToCartBtn.dataset.price = newSalePrice;
-                addToCartBtn.dataset.ratti = currentRatti;
-            }
-            const buyNowBtn = document.querySelector('.buy-now-direct');
-            if (buyNowBtn) {
-                buyNowBtn.dataset.price = newSalePrice;
-                buyNowBtn.dataset.ratti = currentRatti;
-            }
-        });
-    });
 </script>
 
 </body>

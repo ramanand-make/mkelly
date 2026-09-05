@@ -34,7 +34,6 @@ $sale_price = !empty($_POST['sale_price']) ? floatval($_POST['sale_price']) : "N
 $unit = $conn->real_escape_string($_POST['unit'] ?? '');
 // $stock = intval($_POST['stock']);
 $status = intval($_POST['status']);
-$ratti = intval($_POST['ratti_status']);
 $categories = isset($_POST['categories']) ? $_POST['categories'] : [];
 if (!is_array($categories)) {
     $categories = !empty($categories) ? [$categories] : [];
@@ -123,7 +122,6 @@ $query = "UPDATE product SET
           unit = '$unit',
           product_review = $product_review,
           categories = '$categories_str',
-          is_ratti = '$ratti',
           is_active = '$status'
           WHERE id = $id";
 

@@ -284,7 +284,7 @@ include LAYOUT_PATH . "/head.php";
                                                 <!--    <label class="form-label">Stock</label>-->
                                                 <!--    <input type="number" class="form-control" name="stock" value="100">-->
                                                 <!--</div>-->
-                                                <div class="col-md-4 mb-3">
+                                                <div class="col-md-6 mb-3">
                                                     <label class="form-label">Product Review Rating</label>
                                                 
                                                     <select class="form-control" name="review_rating" required>
@@ -294,20 +294,12 @@ include LAYOUT_PATH . "/head.php";
                                                         <option value="5">5 Star</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-4 mb-3">
+                                                <div class="col-md-6 mb-3">
                                                     <label class="form-label">Status</label>
                                                     <select class="form-control" name="status">
                                                         <option value="1">Active</option>
                                                         <option value="0">Inactive</option>
                                                     </select>
-                                                </div>
-                                                 <div class="col-md-4 mb-3">
-                                                    <label class="form-label">Ratti Status</label>
-                                                        <select class="form-control" name="ratti_status">
-                                                            <option value="" >Select Ratti</option>
-                                                            <option value="1" >Active</option>
-                                                            <option value="0">Inactive</option>
-                                                        </select>
                                                 </div>
                                             </div>
                                             <div class="mt-4">

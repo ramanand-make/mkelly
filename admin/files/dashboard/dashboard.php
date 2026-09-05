@@ -347,11 +347,11 @@ include LAYOUT_PATH . "/head.php";
                         <!--                                <?php foreach ($salesStats['recent_orders'] as $order): ?>-->
                         <!--                                <tr>-->
                         <!--                                    <td>#<?= $order['id'] ?></td>-->
-                        <!--                                    <td><?= htmlspecialchars($order['customer_name']) ?></td>-->
-                        <!--                                    <td><?= htmlspecialchars($order['customer_email']) ?></td>-->
-                        <!--                                    <td>₹<?= number_format((float)$order['total_amount'], 2) ?></td>-->
-                        <!--                                    <td><span class="badge bg-<?= $order['status'] == 'pending' ? 'warning' : 'success' ?>"><?= ucfirst($order['status']) ?></span></td>-->
-                        <!--                                    <td><?= date('d M Y, h:i A', strtotime($order['created_at'])) ?></td>-->
+                        <!--                                    <td><?= htmlspecialchars($order['name'] ?? $order['customer_name'] ?? '') ?></td>-->
+                        <!--                                    <td><?= htmlspecialchars($order['email'] ?? $order['customer_email'] ?? '') ?></td>-->
+                        <!--                                    <td>₹<?= number_format((float)($order['total_amount'] ?? 0), 2) ?></td>-->
+                        <!--                                    <td><span class="badge bg-<?= ($order['order_status'] ?? $order['status'] ?? '') == 'pending' ? 'warning' : 'success' ?>"><?= ucfirst($order['order_status'] ?? $order['status'] ?? '') ?></span></td>-->
+                        <!--                                    <td><?= !empty($order['created_at']) ? date('d M Y, h:i A', strtotime($order['created_at'])) : '' ?></td>-->
                         <!--                                </tr>-->
                         <!--                                <?php endforeach; ?>-->
                         <!--                            <?php endif; ?>-->

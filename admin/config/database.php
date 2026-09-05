@@ -35,18 +35,12 @@ $port = $db_port;
 function getSashDBConnection(): ?mysqli
 {
     global $db_host, $db_user, $db_pass, $db_name, $db_port, $host, $user, $pass, $db, $port;
-    static $cachedConn = null;
 
     $h  = $db_host ?? ($host !== ($_SERVER['HTTP_HOST'] ?? '') ? $host : '127.0.0.1');
     $u  = $db_user ?? $user;
     $p  = $db_pass ?? $pass;
     $d  = $db_name ?? $db;
     $pt = (int)($db_port ?? $port ?? 3306);
-
-    // Reuse existing alive connection to prevent opening multiple DB connections per page
-    if ($cachedConn instanceof mysqli && @$cachedConn->ping()) {
-        return $cachedConn;
-    }
 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
@@ -61,7 +55,6 @@ function getSashDBConnection(): ?mysqli
         }
 
         $conn->set_charset("utf8mb4");
-        $cachedConn = $conn;
 
         return $conn;
 
